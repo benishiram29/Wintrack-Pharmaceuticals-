@@ -1,7 +1,8 @@
 /* General Reset and Font Import */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-html, body {
+html,
+body {
     height: 100%;
     margin: 0;
     scroll-behavior: smooth;
@@ -24,8 +25,10 @@ body {
 }
 
 .content {
-    height: 2000px; /* Just for demonstration to allow scrolling */
+    height: 2000px;
+    /* Just for demonstration to allow scrolling */
 }
+
 header {
     background: white;
     color: black;
@@ -38,6 +41,7 @@ header {
     z-index: 9999;
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
+
 header.hidden {
     opacity: 0;
     transform: translateY(-100%);
@@ -74,7 +78,7 @@ nav ul {
     list-style: none;
     padding: 0;
     display: flex;
-    gap: 20px;
+    gap: -20px;
 }
 
 nav ul li {
@@ -82,6 +86,7 @@ nav ul li {
 }
 
 nav ul li a {
+    font-family: 'Times New Roman', Times, serif;
     font-size: medium;
     color: black;
     text-decoration: none;
@@ -97,7 +102,7 @@ nav ul li a:hover {
 
 /* Main Content */
 main {
-    padding-top: 120px; 
+    padding-top: 120px;
 }
 
 .hero-slider {
@@ -106,22 +111,26 @@ main {
     color: white;
     padding: 150px 0;
     text-align: center;
-    min-height: 450px;
+    min-height: 750px;
     position: relative;
     overflow: hidden;
-    transition: opacity 2s ease-in-out; 
+    transition: opacity 2s ease-in-out;
     opacity: 1;
-  }
+}
 
 @keyframes zoomInOut {
     0% {
         transform: scale(1);
     }
+
     50% {
-        transform: scale(1.05); /* Zoom in */
+        transform: scale(1.05);
+        /* Zoom in */
     }
+
     100% {
-        transform: scale(1); /* Move back to original size */
+        transform: scale(1);
+        /* Move back to original size */
     }
 }
 
@@ -144,20 +153,22 @@ main {
         transform: translateY(100%);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
     }
 }
+
 .hero-slider p1 {
-    font-size: 2em;  
+    font-size: 2em;
     color: black;
     font-family: 'Times New Roman', Times, serif;
-    text-shadow: -1px -1px 0 #fff,  
-                 1px -1px 0 #fff,
-                 -1px 1px 0 #fff,
-                 1px 1px 0 #fff; 
-    font-weight: 550;             
+    text-shadow: -1px -1px 0 #fff,
+        1px -1px 0 #fff,
+        -1px 1px 0 #fff,
+        1px 1px 0 #fff;
+    font-weight: 550;
 }
 
 .hero-slider h2 {
@@ -165,20 +176,20 @@ main {
     font-size: 4em;
     margin: 0;
     color: black;
-    text-shadow: -1px -1px 0 #fff,  
-                 1px -1px 0 #fff,
-                 -1px 1px 0 #fff,
-                 1px 1px 0 #fff; 
+    text-shadow: -1px -1px 0 #fff,
+        1px -1px 0 #fff,
+        -1px 1px 0 #fff,
+        1px 1px 0 #fff;
 }
 
 .hero-slider p {
     font-size: 3em;
     color: black;
     font-family: 'Times New Roman', Times, serif;
-    text-shadow: -1px -1px 0 #fff,  
-                 1px -1px 0 #fff,
-                 -1px 1px 0 #fff,
-                 1px 1px 0 #fff; 
+    text-shadow: -1px -1px 0 #fff,
+        1px -1px 0 #fff,
+        -1px 1px 0 #fff,
+        1px 1px 0 #fff;
 }
 
 
@@ -243,28 +254,35 @@ section p {
     padding: 20px;
     margin-top: -10px;
 }
+
 #about .info-box {
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
-    padding: 40px; /* Increased padding for a more spacious feel */
+    padding: 40px;
+    /* Increased padding for a more spacious feel */
     margin-bottom: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    border-radius: 10px; /* Slightly more rounded corners */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Enhanced shadow for better depth */
+    border-radius: 10px;
+    /* Slightly more rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    /* Enhanced shadow for better depth */
 }
 
 #about .info-box::before {
     content: '';
     position: absolute;
-    top: 5px; /* Slight offset from the edges */
+    top: 5px;
+    /* Slight offset from the edges */
     left: 5px;
     right: 5px;
     bottom: 5px;
-    background-color: #f5f5f5; /* Lighter background for contrast */
-    border: 1px solid #e0e0e0; /* Light border to match modern aesthetics */
+    background-color: #f5f5f5;
+    /* Lighter background for contrast */
+    border: 1px solid #e0e0e0;
+    /* Light border to match modern aesthetics */
     border-radius: 10px;
     z-index: -1;
 }
@@ -274,7 +292,8 @@ section p {
     text-align: center;
     padding: 0 20px;
     position: relative;
-    font-family: 'Arial', sans-serif; /* Clean and professional font */
+    font-family: 'Arial', sans-serif;
+    /* Clean and professional font */
 }
 
 #about .info-box-item.left {
@@ -291,32 +310,48 @@ section p {
     top: 0;
     bottom: 0;
     right: 0;
-    width: 1px; /* Thinner separator for a refined look */
-    background-color: #e0e0e0; /* Light color to blend subtly */
+    width: 1px;
+    /* Thinner separator for a refined look */
+    background-color: #e0e0e0;
+    /* Light color to blend subtly */
 }
 
 #about .info-box-item h3 {
-    border-bottom: 2px solid black; /* Use a brand color for prominence */
+    border-bottom: 2px solid black;
+    /* Use a brand color for prominence */
     padding-bottom: 12px;
     margin-bottom: 20px;
-    color: #333; /* Dark color for better readability */
-    font-size: 20px; /* Slightly larger font size for emphasis */
-    font-weight: 700; /* Bold font for headings */
-    text-transform: uppercase; /* Uppercase for a formal touch */
+    color: #333;
+    /* Dark color for better readability */
+    font-size: 20px;
+    /* Slightly larger font size for emphasis */
+    font-weight: 700;
+    /* Bold font for headings */
+    text-transform: uppercase;
+    /* Uppercase for a formal touch */
 }
 
 #about .info-box-item p {
-    color: #666; /* Subtle color for professional text */
-    font-size: 16px; /* Optimal font size for readability */
+    color: #666;
+    /* Subtle color for professional text */
+    font-size: 16px;
+    /* Optimal font size for readability */
     margin-top: 20px;
     text-align: center;
-    line-height: 1.8; /* Improved line height for easier reading */
-    font-family: 'Arial', sans-serif; /* Consistent font for a clean look */
+    line-height: 1.8;
+    /* Improved line height for easier reading */
+    font-family: 'Arial', sans-serif;
+    /* Consistent font for a clean look */
 }
 
 
-#about h2, #about h3 {
+#about h2{
     color: black;
+    font-size: 2em;
+}
+#about h3 {
+    color: black;
+    font-size: 1.5em;
 }
 
 #about h3 {
@@ -324,13 +359,14 @@ section p {
 }
 
 #about h4 {
+    font-family: 'Times New Roman', Times, serif;
     text-align: center;
-    font-size: 2em;
+    font-size: 1.7em;
     color: black;
     font-weight: 100;
 }
 
-#about h5{
+#about h5 {
     font-size: 1.5em;
     color: black;
     text-align: center;
@@ -338,12 +374,14 @@ section p {
 }
 
 #about p {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 200;
     color: black;
 }
 
 #about p2 {
     color: black;
-    font-size: medium;
+    font-size: large;
     text-align: center;
 }
 
@@ -373,36 +411,47 @@ section p {
     margin-right: 20px;
 }
 
-.team-member p{
+.team-member p {
     font-weight: 500;
 }
 
 #ideology {
-    background-color: #d4d3d3; /* Light grey background color */
-    padding: 40px 20px; /* Padding for spacing */
-    text-align: center; /* Center-align text */
+    background-color: #d4d3d3;
+    /* Light grey background color */
+    padding: 40px 20px;
+    /* Padding for spacing */
+    text-align: center;
+    /* Center-align text */
 }
 
 #ideology .container {
-    max-width: 800px; /* Limit container width */
-    margin: 0 auto; /* Center container horizontally */
+    max-width: 800px;
+    /* Limit container width */
+    margin: 0 auto;
+    /* Center container horizontally */
 }
 
 #ideology h2 {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 2em; /* Larger font size for the heading */
-    color: #333; /* Dark color for the heading text */
-    margin-bottom: 20px; /* Space below the heading */
+    font-size: 2em;
+    /* Larger font size for the heading */
+    color: #333;
+    /* Dark color for the heading text */
+    margin-bottom: 20px;
+    /* Space below the heading */
 }
 
 #ideology p {
-    font-size: 1.2em; /* Slightly larger font size for the paragraph */
+    font-size: 1.2em;
+    /* Slightly larger font size for the paragraph */
     color: black;
-    line-height: 1.6; /* Line height for better readability */
-    margin: 0 auto; /* Center-align the paragraph */
+    line-height: 1.6;
+    /* Line height for better readability */
+    margin: 0 auto;
+    /* Center-align the paragraph */
 }
 
-#history p{
+#history p {
     font-weight: 100;
 }
 
@@ -433,13 +482,12 @@ section p {
 }
 
 .product-item img {
-    width: 85%; 
-    height: 95%; 
-    box-shadow: 0px 0px 10px #d4d3d3; 
-    border-radius: 17px; 
-    object-fit: cover; 
+    width: 95%;
+    height: 130%;
+    box-shadow: 0px 0px 10px #d4d3d3;
+    border-radius: 17px;
+    object-fit: cover;
 }
-
 
 .product-item h3 {
     font-size: 1.25rem;
@@ -449,6 +497,7 @@ section p {
 .product-item p {
     color: #555;
 }
+
 #events .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -457,7 +506,7 @@ section p {
 }
 
 #events h2 {
-    font-size: 2.5em;
+    font-size: 2em;
     margin-bottom: 10px;
 }
 
@@ -484,8 +533,10 @@ section p {
     word-wrap: break-word;
     overflow-wrap: break-word;
     white-space: normal;
-    padding-left: 40px; /* Add space on the left */
-    padding-right: 40px; /* Add space on the right */
+    padding-left: 40px;
+    /* Add space on the left */
+    padding-right: 40px;
+    /* Add space on the right */
     text-align: center;
 }
 
@@ -494,7 +545,7 @@ section p {
 #thailand .image-gallery h3 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.7em;
-}    
+}
 
 .albums {
     display: flex;
@@ -516,7 +567,8 @@ section p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.album p, .album p1 {
+.album p,
+.album p1 {
     margin-top: 10px;
     font-size: 1.1em;
     font-weight: bold;
@@ -532,7 +584,8 @@ section p {
     display: none;
     text-align: center;
     margin-top: 40px;
-    margin-bottom: 60px; /* Added margin to create space between images and footer */
+    margin-bottom: 60px;
+    /* Added margin to create space between images and footer */
 }
 
 .album-images .image-gallery {
@@ -565,7 +618,7 @@ section p {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
 }
 
 /* Lightbox content */
@@ -588,7 +641,8 @@ section p {
 }
 
 /* Navigation arrows */
-.prev, .next {
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -609,9 +663,11 @@ section p {
 }
 
 /* On hover */
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
+
 .lightbox-nav {
     cursor: pointer;
     position: absolute;
@@ -638,7 +694,7 @@ section p {
 }
 
 .lightbox-nav:hover {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 
@@ -697,11 +753,12 @@ section p {
     margin-top: 0;
     color: #333;
 }
+
 #policies h1 {
-    font-weight: 550;
     margin-top: 0;
     color: #333;
     text-align: center;
+    font-size: 2em;
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -713,12 +770,13 @@ section p {
 #map {
     height: 400px;
     width: 100%;
-    margin-top: 20px; 
-    position: relative; 
+    margin-top: 20px;
+    position: relative;
 }
 
 #contact .container .leaflet-control-zoom {
-    z-index: 100; /* Ensure zoom controls are on top */
+    z-index: 100;
+    /* Ensure zoom controls are on top */
 }
 
 .contact-info h2 {
@@ -730,6 +788,7 @@ section p {
     font-size: 1.2em !important;
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
+    margin-top: -20px;
 }
 
 #contact .container p {
@@ -744,27 +803,25 @@ section p {
 }
 
 .contact-info a {
-    color: #007bff; 
+    color: #007bff;
     text-decoration: none;
 }
 
 .contact-info a:hover {
-    text-decoration: underline; 
+    text-decoration: underline;
 }
 
-
 footer {
-    background-color: #5e5a5a;
+    background-color: #444242;
     color: white;
-    text-align: center;
     padding: 20px 0;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
     position: relative;
     width: 100%;
     bottom: 0;
-    margin-top: 60px; /* Added margin to separate the footer from the album images */
+    margin-top: 60px;
+    /* Added margin to separate the footer from the album images */
 }
-
 
 .footer-content {
     display: flex;
@@ -776,18 +833,21 @@ footer {
 .footer-info {
     display: flex;
     flex-direction: column;
-    font-size: 16px;
+    font-size: 14px;
     max-width: 60%;
+    margin: 0 auto;
+    /* Center the content in the middle */
 }
 
 .footer-info p {
+    text-align: left;
     margin: 0;
     padding: 10px 0;
 }
 
 .footer-info i {
     margin-right: 8px;
-    color: #319e52;
+    color: #d3d0d0;
 }
 
 .footer-info a {
@@ -801,18 +861,28 @@ footer {
 
 .footer-divider {
     border: 0;
-    border-top: 1px solid #ddd;
+    height: 1px;
+    background: #ddd;
+    /* Line color */
     margin: 10px 0;
+    /* Space above and below the line */
+    width: 80%;
+    /* Adjust this percentage to change the width of the line */
+    max-width: 500px;
+    /* Optional: Set a maximum width for larger screens */
+    margin-right: -50px;
+    /* Center the line horizontally */
 }
 
 .footer-social {
     display: flex;
     gap: 10px;
+    align-items: center;
 }
 
 .social-icon {
-    font-size: 24px;
-    color: #333;
+    font-size: 32px;
+    color: #d3d0d0;
     text-decoration: none;
 }
 
@@ -840,145 +910,62 @@ footer {
 .footer-logo {
     height: 50px;
 }
-/* Styles for screens with max-width 1200px */
-@media screen and (max-width: 1200px) {
-    .container {
-        width: 90%;
-    }
-    nav {
-        margin-left: 200px;
-    }
-    .hero-slider {
-        padding: 100px 0;
-    }
-    .hero-slider-content {
-        gap: 10px;
-    }
-    .product-item {
-        width: 250px;
-        height: 120px;
-    }
-    .team-member img {
-        width: 250px;
-        height: 250px;
-    }
+
+.footer-left {
+    font-size: 1em;
+    flex: 1;
+    text-align: left;
+    margin-right: 60px;
 }
 
-/* Styles for screens with max-width 992px */
-@media screen and (max-width: 992px) {
-    header .container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    nav {
-        margin-left: 0;
-    }
-    .hero-slider {
-        padding: 80px 0;
-    }
-    .hero-slider-content {
-        flex-direction: column;
-    }
-    .product-item {
-        width: 220px;
-        height: auto;
-    }
-    .team-member {
-        flex-direction: column;
-        align-items: center;
-    }
-    .team-member img {
-        width: 200px;
-        height: 200px;
-    }
+.footer-center {
+    flex: 2;
+    text-align: center;
+    margin-right: -50px;
 }
 
-/* Styles for screens with max-width 768px */
-@media screen and (max-width: 768px) {
-    .container {
-        width: 95%;
-    }
-    nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .hero-slider {
-        padding: 60px 0;
-    }
-    .hero-slider-content {
-        gap: 5px;
-    }
-    .product-item {
-        width: 100%;
-        height: auto;
-    }
-    .team-member img {
-        width: 150px;
-        height: 150px;
-    }
+.footer-right {
+    flex: 1;
+    text-align: right;
+    margin-left: 100px;
 }
 
-/* Styles for screens with max-width 576px */
-@media screen and (max-width: 576px) {
-    header {
-        padding: 10px 0;
-    }
-    header .logo {
-        height: 60px;
-        width: 60px;
-    }
-    header h1 {
-        font-size: 1.5em;
-    }
-    nav ul {
-        font-size: 0.8em;
-    }
-    .hero-slider {
-        padding: 40px 0;
-    }
-    .hero-slider-content {
-        flex-direction: column;
-        gap: 2px;
-    }
-    .product-item {
-        width: 100%;
-        height: auto;
-    }
-    .team-member img {
-        width: 120px;
-        height: 120px;
-    }
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-    }
-    .footer-bottom {
-        flex-direction: column;
-        align-items: center;
-    }
+.footer-section.social-connect {
+    text-align: center;
+    /* Center-aligns the text and icons */
+    padding: 20px;
+    /* Adjust as needed */
 }
 
-/* Styles for screens with min-width 320px and max-width 480px */
-@media screen and (min-width: 320px) and (max-width: 480px) {
-    .hero-slider {
-        padding: 20px 0;
-    }
-    .hero-slider-content {
-        gap: 0;
-    }
-    .product-item {
-        width: 100%;
-        height: auto;
-    }
-    .team-member img {
-        width: 100px;
-        height: 100px;
-    }
-    .footer-info {
-        font-size: 14px;
-    }
-    .footer-bottom p {
-        font-size: 12px;
-        margin-left: 0;
-    }
+.footer-section.social-connect p {
+    font-size: 16px;
+    /* Adjust font size as needed */
+    margin-bottom: 10px;
+    /* Space between text and line */
+}
+
+.divider-line {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    /* Line color */
+    margin: 10px 0;
+    /* Space above and below the line */
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    /* Centers icons horizontally */
+}
+
+.social-icon {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #d3d0d0;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #007bff;
 }
