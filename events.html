@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wintrack-Pharma Events</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img src="logo.png" alt="Wintrack Pharmaceutical Logo" class="logo">
+            <h1>Wintrack Pharmaceutical</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="policies.html">Policies & Rules</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="events">
+            <div class="container">
+                <h2>Events</h2>
+                <p>Explore our memorable events and milestones that have shaped our journey. From Grand Inauguration to
+                    National & International Conferences, each album captures the essence of our Dedication,
+                    Collaboration, and Success.</p>
+                <div class="albums">
+                    <div class="album" onclick="openAlbum('inauguration')">
+                        <img src="inauguration.jpg" alt="Inauguration Ceremony">
+                        <p1>Inauguration Ceremony</p1>
+                    </div>
+                    <div class="album" onclick="openAlbum('malaysia')">
+                        <img src="malaysia.jpg" alt="Malaysia Conference">
+                        <p1>Malaysia Conference</p1>
+                    </div>
+                    <div class="album" onclick="openAlbum('thailand')">
+                        <img src="thailand.JPG" alt="Thailand Conference">
+                        <p1>Thailand Conference</p1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hidden album containers -->
+        <div id="inauguration" class="album-images">
+            <div class="image-gallery">
+                <h3>Inauguration Ceremony</h3><br>
+                <p>On June 15, 2019, Wintrack marked its first footprints in Karachi by opening its head office there.
+                    The day was also marked by the launch of Wintrack’s new product, "Welmide."
+                    The company's Chief Patron, Mr. Syed Qamaruddin, inaugurated the office as the Chief Guest.</p><br>
+                <img src="inauguration.jpg" alt="Image 1">
+                <img src="inauguration1.jpg" alt="Image 2">
+                <img src="inauguration2.jpg" alt="Image 3">
+                <img src="inauguration3.jpg" alt="Image 4">
+                <img src="inauguration4.jpg" alt="Image 5">
+                <img src="inauguration5.jpg" alt="Image 6">
+                <img src="inauguration6.jpg" alt="Image 7">
+            </div>
+        </div>
+
+        <div id="malaysia" class="album-images">
+            <div class="image-gallery">
+                <img src="malaysia.jpg" alt="Image 1">
+                <img src="malaysia1.jpg" alt="Image 2">
+                <img src="malaysia2.jpg" alt="Image 3">
+                <img src="malaysia3.jpg" alt="Image 4">
+                <img src="malaysia4.jpg" alt="Image 5">
+                <img src="malaysia5.jpg" alt="Image 6">
+                <img src="malaysia6.jpg" alt="Image 7">
+                <img src="malaysia7.jpg" alt="Image 8">
+                <img src="malaysia8.jpg" alt="Image 9">
+                <img src="malaysia9.jpg" alt="Image 10">
+                <img src="malaysia10.jpg" alt="Image 11">
+                <img src="malaysia11.jpg" alt="Image 12">
+                <img src="malaysia12.jpg" alt="Image 13">
+                <img src="malaysia13.jpg" alt="Image 14">
+                <img src="malaysia14.jpg" alt="Image 15">
+                <img src="malaysia15.jpg" alt="Image 16">
+                <img src="malaysia16.jpg" alt="Image 17">
+                <img src="malaysia17.jpg" alt="Image 18">
+                <img src="malaysia18.jpg" alt="Image 19">
+                <img src="malaysia19.jpg" alt="Image 20">
+            </div>
+        </div>
+
+        <div id="thailand" class="album-images">
+            <div class="image-gallery">
+                <h3>Thailand Conference</h3><br>
+                <p>The Annual Conference 2018 was held in Thailand, where the company's performance, targets, and growth
+                    were discussed with the team.
+                    Furthermore, awards were given to top performers, and a celebration was held to boost team morale.
+                </p><br>
+                <img src="thailand.JPG" alt="Image 1">
+                <img src="thailand1.jpg" alt="Image 2">
+                <img src="thailand3.jpg" alt="Image 4">
+                <img src="thailand4.jpg" alt="Image 5">
+                <img src="thailand5.jpg" alt="Image 6">
+                <img src="thailand6.jpg" alt="Image 7">
+                <img src="thailand7.jpg" alt="Image 8">
+                <img src="thailand8.jpg" alt="Image 9">
+                <img src="thailand9.jpg" alt="Image 10">
+                <img src="thailand10.jpg" alt="Image 11">
+                <img src="thailand11.jpg" alt="Image 12">
+                <img src="thailand12.jpg" alt="Image 13">
+                <img src="thailand13.jpg" alt="Image 14">
+                <img src="thailand14.jpg" alt="Image 15">
+            </div>         
+        </div>
+        
+        <div id="lightbox" class="lightbox">
+            <span class="close" onclick="closeLightbox()">&times;</span>
+            <img class="lightbox-content" id="lightbox-img">
+            <a class="prev lightbox-nav" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next lightbox-nav" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+
+        <script>
+            let currentIndex = 0;
+            let images = [];
+
+            function openAlbum(albumId) {
+                const albums = document.querySelectorAll('.album-images');
+                albums.forEach(album => {
+                    album.style.display = 'none';
+                });
+                const album = document.getElementById(albumId);
+                album.style.display = 'block';
+                images = Array.from(album.getElementsByTagName('img'));
+                currentIndex = 0; // Reset index
+            }
+
+            function openLightbox(index) {
+                const lightbox = document.getElementById('lightbox');
+                const lightboxImg = document.getElementById('lightbox-img');
+                lightbox.style.display = 'block';
+                lightboxImg.src = images[index].src;
+                currentIndex = index;
+            }
+
+            function closeLightbox() {
+                const lightbox = document.getElementById('lightbox');
+                lightbox.style.display = 'none';
+            }
+
+            function changeSlide(direction) {
+                currentIndex += direction;
+                if (currentIndex >= images.length) currentIndex = 0;
+                if (currentIndex < 0) currentIndex = images.length - 1;
+                document.getElementById('lightbox-img').src = images[currentIndex].src;
+            }
+
+            document.querySelectorAll('.album-images img').forEach((img, index) => {
+                img.addEventListener('click', () => openLightbox(index));
+            });
+        </script>
+    </main>
+    <footer>
+        <p><i>Wintrack Pharmaceutical</i><br><br>
+            WINTRACK PHARMA has very highly professional team in all departments of the company.</p><br>
+        <div class="container footer-content">
+            <div class="footer-info">
+                <p><i class="fas fa-map-marker-alt"></i> Address: B, 115, Block 3 Gulshan-e-Iqbal, Karachi, Karachi
+                    City, Sindh</p>
+                <hr class="footer-divider">
+                <p><i class="fas fa-phone-alt"></i> Phone: <a href="tel:02134814060">(021) 34814060</a></p>
+                <hr class="footer-divider">
+                <p><i class="fas fa-envelope"></i> Email: <a
+                        href="mailto:info@wintrackpharma.pk">info@wintrackpharma.com</a></p>
+                <hr class="footer-divider">
+            </div>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/wintrack.pharma_official?igsh=ZWcxamNwZmFndGg0" target="_blank"
+                    class="social-icon" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/company/wintrack-pharmaceuticals/mycompany" target="_blank"
+                    class="social-icon" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.facebook.com/wintrackpharma" target="_blank" class="social-icon"
+                    aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Wintrack Pharmaceuticals. All rights reserved.</p>
+            <img src="whitelogo.png" alt="Wintrack Pharmaceutical Logo" class="footer-logo">
+        </div>
+    </footer>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
