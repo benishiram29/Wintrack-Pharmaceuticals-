@@ -840,3 +840,145 @@ footer {
 .footer-logo {
     height: 50px;
 }
+/* Styles for screens with max-width 1200px */
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+    nav {
+        margin-left: 200px;
+    }
+    .hero-slider {
+        padding: 100px 0;
+    }
+    .hero-slider-content {
+        gap: 10px;
+    }
+    .product-item {
+        width: 250px;
+        height: 120px;
+    }
+    .team-member img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/* Styles for screens with max-width 992px */
+@media screen and (max-width: 992px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav {
+        margin-left: 0;
+    }
+    .hero-slider {
+        padding: 80px 0;
+    }
+    .hero-slider-content {
+        flex-direction: column;
+    }
+    .product-item {
+        width: 220px;
+        height: auto;
+    }
+    .team-member {
+        flex-direction: column;
+        align-items: center;
+    }
+    .team-member img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Styles for screens with max-width 768px */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .hero-slider {
+        padding: 60px 0;
+    }
+    .hero-slider-content {
+        gap: 5px;
+    }
+    .product-item {
+        width: 100%;
+        height: auto;
+    }
+    .team-member img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Styles for screens with max-width 576px */
+@media screen and (max-width: 576px) {
+    header {
+        padding: 10px 0;
+    }
+    header .logo {
+        height: 60px;
+        width: 60px;
+    }
+    header h1 {
+        font-size: 1.5em;
+    }
+    nav ul {
+        font-size: 0.8em;
+    }
+    .hero-slider {
+        padding: 40px 0;
+    }
+    .hero-slider-content {
+        flex-direction: column;
+        gap: 2px;
+    }
+    .product-item {
+        width: 100%;
+        height: auto;
+    }
+    .team-member img {
+        width: 120px;
+        height: 120px;
+    }
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Styles for screens with min-width 320px and max-width 480px */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .hero-slider {
+        padding: 20px 0;
+    }
+    .hero-slider-content {
+        gap: 0;
+    }
+    .product-item {
+        width: 100%;
+        height: auto;
+    }
+    .team-member img {
+        width: 100px;
+        height: 100px;
+    }
+    .footer-info {
+        font-size: 14px;
+    }
+    .footer-bottom p {
+        font-size: 12px;
+        margin-left: 0;
+    }
+}
