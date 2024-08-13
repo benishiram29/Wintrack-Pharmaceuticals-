@@ -1,4 +1,4 @@
-
+/* General Reset and Font Import */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 html,
@@ -17,6 +17,7 @@ body {
     min-height: 100vh;
 }
 
+/* Container */
 .container {
     width: 80%;
     margin: 0 auto;
@@ -25,6 +26,7 @@ body {
 
 .content {
     height: 2000px;
+    /* Just for demonstration to allow scrolling */
 }
 
 header {
@@ -98,6 +100,7 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
+/* Main Content */
 main {
     padding-top: 120px;
 }
@@ -122,10 +125,12 @@ main {
 
     50% {
         transform: scale(1.05);
+        /* Zoom in */
     }
 
     100% {
         transform: scale(1);
+        /* Move back to original size */
     }
 }
 
@@ -159,6 +164,7 @@ main {
     font-size: 2em;
     color: white;
     font-family: 'Times New Roman', Times, serif;
+  
     font-weight: 550;
 }
 
@@ -219,7 +225,7 @@ main {
 }
 
 .read-more:hover {
-    color: #2b83e0; 
+    color: #2b83e0; /* Adjust the hover color as needed */
 }
 
 .arrow {
@@ -280,24 +286,30 @@ section p {
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
     padding: 40px;
+    /* Increased padding for a more spacious feel */
     margin-bottom: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
     border-radius: 10px;
+    /* Slightly more rounded corners */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    /* Enhanced shadow for better depth */
 }
 
 #about .info-box::before {
     content: '';
     position: absolute;
     top: 5px;
+    /* Slight offset from the edges */
     left: 5px;
     right: 5px;
     bottom: 5px;
     background-color: #f5f5f5;
+    /* Lighter background for contrast */
     border: 1px solid #e0e0e0;
+    /* Light border to match modern aesthetics */
     border-radius: 10px;
     z-index: -1;
 }
@@ -308,6 +320,7 @@ section p {
     padding: 0 20px;
     position: relative;
     font-family: 'Arial', sans-serif;
+    /* Clean and professional font */
 }
 
 #about .info-box-item.left {
@@ -325,26 +338,37 @@ section p {
     bottom: 0;
     right: 0;
     width: 1px;
+    /* Thinner separator for a refined look */
     background-color: #e0e0e0;
+    /* Light color to blend subtly */
 }
 
 #about .info-box-item h3 {
     border-bottom: 2px solid black;
+    /* Use a brand color for prominence */
     padding-bottom: 12px;
     margin-bottom: 20px;
     color: #333;
+    /* Dark color for better readability */
     font-size: 20px;
+    /* Slightly larger font size for emphasis */
     font-weight: 700;
+    /* Bold font for headings */
     text-transform: uppercase;
+    /* Uppercase for a formal touch */
 }
 
 #about .info-box-item p {
     color: #666;
+    /* Subtle color for professional text */
     font-size: 16px;
+    /* Optimal font size for readability */
     margin-top: 20px;
     text-align: center;
     line-height: 1.8;
+    /* Improved line height for easier reading */
     font-family: 'Arial', sans-serif;
+    /* Consistent font for a clean look */
 }
 
 
@@ -420,27 +444,38 @@ section p {
 
 #ideology {
     background-color: #d4d3d3;
+    /* Light grey background color */
     padding: 40px 20px;
+    /* Padding for spacing */
     text-align: center;
+    /* Center-align text */
 }
 
 #ideology .container {
     max-width: 800px;
+    /* Limit container width */
     margin: 0 auto;
+    /* Center container horizontally */
 }
 
 #ideology h2 {
     font-family: 'Times New Roman', Times, serif;
     font-size: 2em;
+    /* Larger font size for the heading */
     color: #333;
+    /* Dark color for the heading text */
     margin-bottom: 20px;
+    /* Space below the heading */
 }
 
 #ideology p {
     font-size: 1.2em;
+    /* Slightly larger font size for the paragraph */
     color: black;
     line-height: 1.6;
+    /* Line height for better readability */
     margin: 0 auto;
+    /* Center-align the paragraph */
 }
 
 #history p {
@@ -528,7 +563,9 @@ section p {
     overflow-wrap: break-word;
     white-space: normal;
     padding-left: 40px;
+    /* Add space on the left */
     padding-right: 40px;
+    /* Add space on the right */
     text-align: center;
 }
 
@@ -568,15 +605,18 @@ section p {
     font-weight: bold;
 }
 
+/* Hover effect */
 .album:hover {
     transform: scale(1.05);
 }
 
+/* Hidden Album Images */
 .album-images {
     display: none;
     text-align: center;
     margin-top: 40px;
     margin-bottom: 60px;
+    /* Added margin to create space between images and footer */
 }
 
 .album-images .image-gallery {
@@ -599,6 +639,7 @@ section p {
     transform: scale(1.1);
 }
 
+/* Lightbox container */
 .lightbox {
     display: none;
     position: fixed;
@@ -611,6 +652,7 @@ section p {
     background: rgba(0, 0, 0, 0.8);
 }
 
+/* Lightbox content */
 .lightbox-content {
     display: block;
     margin: auto;
@@ -619,6 +661,7 @@ section p {
     margin-top: 150px;
 }
 
+/* Close button */
 .close {
     position: absolute;
     top: 15px;
@@ -628,6 +671,7 @@ section p {
     font-weight: bold;
 }
 
+/* Navigation arrows */
 .prev,
 .next {
     cursor: pointer;
@@ -649,6 +693,7 @@ section p {
     border-radius: 3px 0 0 3px;
 }
 
+/* On hover */
 .prev:hover,
 .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
@@ -683,6 +728,8 @@ section p {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
+
+/* Modal styles */
 .modal {
     display: none;
     position: fixed;
@@ -760,6 +807,7 @@ section p {
 
 #contact .container .leaflet-control-zoom {
     z-index: 100;
+    /* Ensure zoom controls are on top */
 }
 
 .contact-info h2 {
@@ -803,6 +851,7 @@ footer {
     width: 100%;
     bottom: 0;
     margin-top: 60px;
+    /* Added margin to separate the footer from the album images */
 }
 
 .footer-content {
@@ -818,6 +867,7 @@ footer {
     font-size: 14px;
     max-width: 60%;
     margin: 0 auto;
+    /* Center the content in the middle */
 }
 
 .footer-info p {
@@ -844,10 +894,15 @@ footer {
     border: 0;
     height: 1px;
     background: #ddd;
+    /* Line color */
     margin: 10px 0;
+    /* Space above and below the line */
     width: 80%;
+    /* Adjust this percentage to change the width of the line */
     max-width: 500px;
+    /* Optional: Set a maximum width for larger screens */
     margin-right: -50px;
+    /* Center the line horizontally */
 }
 
 .footer-social {
@@ -912,12 +967,16 @@ footer {
 
 .footer-section.social-connect {
     text-align: center;
+    /* Center-aligns the text and icons */
     padding: 20px;
+    /* Adjust as needed */
 }
 
 .footer-section.social-connect p {
     font-size: 16px;
+    /* Adjust font size as needed */
     margin-bottom: 10px;
+    /* Space between text and line */
 }
 
 .divider-line {
@@ -926,11 +985,13 @@ footer {
     background: #ddd;
     /* Line color */
     margin: 10px 0;
+    /* Space above and below the line */
 }
 
 .social-media-icons {
     display: flex;
     justify-content: center;
+    /* Centers icons horizontally */
 }
 
 .social-icon {
