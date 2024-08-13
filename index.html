@@ -134,12 +134,12 @@
             const slider = document.querySelector('.hero-slider');
 
             function changeBackgroundImage() {
-                slider.style.opacity = 0; // Fade out to 0%
+                slider.style.opacity = 0; 
                 setTimeout(() => {
                     currentIndex = (currentIndex + 1) % images.length;
                     slider.style.backgroundImage = `url(${images[currentIndex]})`;
-                    slider.style.opacity = 1; // Fade in to 100%
-                }, 2000); // Wait for the fade-out to complete before changing the image
+                    slider.style.opacity = 1; 
+                }, 2000); 
             }
 
             setInterval(changeBackgroundImage, 10000); 
