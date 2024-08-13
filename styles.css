@@ -1004,3 +1004,480 @@ footer {
 .social-icon:hover {
     color: #007bff;
 }
+
+
+/* Responsive Adjustments for Screens up to 1200px */
+@media screen and (max-width: 1200px) {
+    /* Container */
+    .container {
+        width: 90%;
+        max-width: 100%;
+    }
+
+    /* Header */
+    header .logo {
+        height: 80px;
+        width: 80px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav {
+        margin-left: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        font-size: 0.9em;
+    }
+
+    /* Main Content */
+    .hero-slider {
+        padding: 100px 0;
+        min-height: 600px;
+    }
+
+    .hero-slider p1 {
+        font-size: 1.5em;
+    }
+
+    .hero-slider h2 {
+        font-size: 2.5em;
+    }
+
+    .hero-slider p {
+        font-size: 2em;
+    }
+
+    /* About Section */
+    #about .info-box {
+        padding: 20px;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+
+    #about .info-box-item {
+        padding: 0 10px;
+    }
+
+    #about .info-box-item h3 {
+        font-size: 1.2em;
+    }
+
+    #about .info-box-item p {
+        font-size: 14px;
+    }
+
+    /* Team Member */
+    .team-member {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .team-member img {
+        width: 200px;
+        height: 200px;
+    }
+
+    /* Products */
+    .product-item {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    /* Events */
+    .album {
+        width: 300px;
+    }
+
+    .album-images img {
+        width: 150px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 10px 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-info {
+        max-width: 100%;
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    /* General container adjustments */
+    .container {
+        width: 90%;
+    }
+
+    /* Header adjustments */
+    .header-logo {
+        width: 150px; /* Adjust logo size */
+    }
+    .header-title {
+        font-size: 24px; /* Reduce font size */
+    }
+    .header-nav {
+        display: block;
+        text-align: center;
+    }
+    .header-nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* Hero Slider adjustments */
+    .hero-slider {
+        padding: 30px 0; /* Adjust padding */
+    }
+    .hero-slider h1 {
+        font-size: 28px; /* Reduce font size */
+    }
+    .hero-slider p {
+        font-size: 18px; /* Reduce font size */
+    }
+    .hero-slider .read-more {
+        font-size: 14px; /* Adjust font size for Read More */
+    }
+
+    /* About Section adjustments */
+    .about-section {
+        padding: 20px 0; /* Adjust padding */
+    }
+    .about-section h2 {
+        font-size: 22px; /* Reduce font size */
+    }
+    .about-section p {
+        font-size: 16px; /* Reduce font size */
+    }
+
+    /* Team Members adjustments */
+    .team-members {
+        display: block; /* Stack team members vertically */
+        text-align: center;
+    }
+    .team-member {
+        margin-bottom: 20px; /* Space between team members */
+    }
+    .team-member img {
+        width: 80%; /* Scale down images */
+        height: auto;
+    }
+    .team-info {
+        text-align: center;
+    }
+
+    /* Products adjustments */
+    .product-item {
+        width: 100%; /* Full width of container */
+        margin-bottom: 20px; /* Space between products */
+    }
+    .product-item img {
+        width: 100%; /* Scale images to fit container */
+        height: auto;
+    }
+
+    /* Events adjustments */
+    .events {
+        padding: 20px 0; /* Adjust padding */
+    }
+    .event-item {
+        margin-bottom: 20px; /* Space between event items */
+    }
+    .event-item img {
+        width: 100%; /* Scale images to fit container */
+        height: auto;
+    }
+
+    /* Footer adjustments */
+    .footer {
+        text-align: center; /* Center text */
+    }
+    .footer-logo {
+        width: 120px; /* Adjust logo size */
+    }
+    .footer-contact {
+        display: block;
+        margin: 10px 0; /* Space between contact details */
+    }
+    .footer-social {
+        margin-top: 20px; /* Space above social icons */
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    /* General container adjustments */
+    .container {
+        width: 95%;
+    }
+
+    /* Header adjustments */
+    .header-logo {
+        width: 120px; /* Further reduce logo size */
+    }
+    .header-title {
+        font-size: 20px; /* Reduce font size */
+    }
+    .header-nav {
+        display: block;
+        text-align: center;
+    }
+    .header-nav a {
+        display: block;
+        margin: 8px 0;
+    }
+
+    /* Hero Slider adjustments */
+    .hero-slider {
+        padding: 20px 0; /* Adjust padding */
+    }
+    .hero-slider h1 {
+        font-size: 24px; /* Reduce font size */
+    }
+    .hero-slider p {
+        font-size: 16px; /* Reduce font size */
+    }
+    .hero-slider .read-more {
+        font-size: 12px; /* Adjust font size for Read More */
+    }
+
+    /* About Section adjustments */
+    .about-section {
+        padding: 15px 0; /* Adjust padding */
+    }
+    .about-section h2 {
+        font-size: 20px; /* Reduce font size */
+    }
+    .about-section p {
+        font-size: 14px; /* Reduce font size */
+    }
+
+    /* Team Members adjustments */
+    .team-members {
+        display: block; /* Stack team members vertically */
+        text-align: center;
+    }
+    .team-member {
+        margin-bottom: 15px; /* Space between team members */
+    }
+    .team-member img {
+        width: 70%; /* Scale down images */
+        height: auto;
+    }
+    .team-info {
+        text-align: center;
+    }
+
+    /* Products adjustments */
+    .product-item {
+        width: 100%; /* Full width of container */
+        margin-bottom: 15px; /* Space between products */
+    }
+    .product-item img {
+        width: 100%; /* Scale images to fit container */
+        height: auto;
+    }
+
+    /* Events adjustments */
+    .events {
+        padding: 15px 0; /* Adjust padding */
+    }
+    .event-item {
+        margin-bottom: 15px; /* Space between event items */
+    }
+    .event-item img {
+        width: 100%; /* Scale images to fit container */
+        height: auto;
+    }
+
+    /* Footer adjustments */
+    .footer {
+        text-align: center; /* Center text */
+    }
+    .footer-logo {
+        width: 100px; /* Further adjust logo size */
+    }
+    .footer-contact {
+        display: block;
+        margin: 8px 0; /* Space between contact details */
+    }
+    .footer-social {
+        margin-top: 15px; /* Space above social icons */
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+    /* Hide header buttons */
+    .header-buttons {
+        display: none;
+    }
+    
+    /* Style the hamburger menu */
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger-menu div {
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        margin: 5px 0;
+        transition: 0.3s;
+    }
+
+    /* Initially hide the dropdown menu */
+    .header-menu {
+        display: none;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        right: 10px; /* Adjust based on header alignment */
+        background: #fff;
+        border: 1px solid #ddd;
+        padding: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .header-menu.show {
+        display: block;
+    }
+
+    header .logo {
+        height: 50px;
+        width: 50px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    .hero-slider {
+        padding: 100px 0;
+    }
+
+    .hero-slider-content {
+        flex-direction: column;
+    }
+
+    .read-more-container {
+        flex-direction: column;
+    }
+
+    .arrow {
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    header .logo {
+        height: 40px;
+        width: 40px;
+    }
+
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    nav {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding-left: 0;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    nav ul li a {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    .hero-slider {
+        padding: 80px 10px;
+        text-align: center;
+    }
+
+    .hero-slider-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-slider h2 {
+        font-size: 1.5em;
+    }
+
+    .hero-slider p {
+        font-size: 1.2em;
+    }
+
+    .read-more-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .read-more {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    footer .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .container > div {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    footer .social-icons {
+        font-size: 1.2em;
+    }
+
+    footer .contact-details p {
+        font-size: 0.9em;
+    }
+}

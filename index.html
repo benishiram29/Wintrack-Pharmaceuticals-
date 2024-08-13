@@ -13,6 +13,37 @@
 </head>
 
 <body>
+    <div class="header">
+        <!-- Hamburger Menu -->
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        
+        <!-- Header Buttons -->
+        <div class="header-buttons">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+    
+        <!-- Dropdown Menu -->
+        <div class="header-menu" id="headerMenu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+<script>
+    function toggleMenu() {
+    const menu = document.getElementById('headerMenu');
+    menu.classList.toggle('show');
+}
+
+</script>    
     <header>
         <div class="container">
             <img src="logo.png" alt="Wintrack Pharmaceutical Logo" class="logo">
@@ -60,7 +91,7 @@
                             <h2>Trusted Solutions for Patients</h2>
                             <p1>Delivering reliable and innovative healthcare solutions tailored to meet the needs of
                                 our patients and ensure a brighter, healthier future.</p1>
-                                <br><br> <br><br> <br><br><span class="horizontal-line"></span><br>
+                            <br><br> <br><br> <br><br><span class="horizontal-line"></span><br>
                             <a href="#about" class="read-more">Read More</a>
                         </div>
                     </div>
@@ -105,7 +136,7 @@
                             <h2>Committed to Patient Care</h2>
                             <p1>Our mission is to enhance patient lives through effective and trusted pharmaceutical
                                 solutions.</p1>
-                                <br><br> <br><br> <br><br><span class="horizontal-line"></span><br>
+                            <br><br> <br><br> <br><br><span class="horizontal-line"></span><br>
                             <a href="#about" class="read-more">Read More</a>
                         </div>
                     </div>
@@ -134,15 +165,16 @@
             const slider = document.querySelector('.hero-slider');
 
             function changeBackgroundImage() {
-                slider.style.opacity = 0.5; // Fade out to 50% to avoid too much whiteness
+                slider.style.opacity = 0; // Fade out to 0%
                 setTimeout(() => {
                     currentIndex = (currentIndex + 1) % images.length;
                     slider.style.backgroundImage = `url(${images[currentIndex]})`;
-                    slider.style.opacity = 1; // Fade in new image
+                    slider.style.opacity = 1; // Fade in to 100%
                 }, 2000); // Wait for the fade-out to complete before changing the image
             }
 
-            setInterval(changeBackgroundImage, 10000); // Change image every 10 seconds
+            setInterval(changeBackgroundImage, 10000); 
+
         </script>
         <script>
             document.addEventListener('DOMContentLoaded', () => {
@@ -169,7 +201,7 @@
                 setInterval(() => {
                     slideIndex = (slideIndex + 1) % slides.length;
                     showSlides();
-                }, 13000); // Change slide every 5 seconds
+                }, 13000);
             });
 
         </script>
@@ -345,10 +377,10 @@
                 <hr class="footer-divider">
                 <p><i class="fas fa-phone-alt"></i> Phone: <a href="tel:02134814060">+92 213 481 4060</a></p>
                 <hr class="footer-divider">
-                <p><i class="fas fa-envelope"></i> Email: 
-                    <a href="mailto:info@wintrackpharma.com">info@wintrackpharma.com</a> | 
+                <p><i class="fas fa-envelope"></i> Email:
+                    <a href="mailto:info@wintrackpharma.com">info@wintrackpharma.com</a> |
                     <a href="mailto:wintrackpharma@yahoo.com">wintrackpharma@yahoo.com</a>
-                </p>                
+                </p>
                 <hr class="footer-divider">
             </div>
 
