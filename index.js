@@ -42,6 +42,10 @@ window.addEventListener('touchstart', function() {
     header.classList.remove('hidden');
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    let currentIndex = 0;
+    let images = [];
+
     // Function to open an album and scroll to the album detail section
     function openAlbum(albumId) {
         console.log("Opening album:", albumId); // Log to verify the function is being called
@@ -61,13 +65,55 @@ window.addEventListener('touchstart', function() {
                 behavior: 'smooth',
                 block: 'start'
             });
+
+            // Update images array and set initial index
+            images = Array.from(album.getElementsByTagName('img'));
+            currentIndex = 0; // Reset index
         } else {
             console.error("Album with ID", albumId, "not found");
         }
     }
 
-    // Add event listeners to each album image to open lightbox
+    function openLightbox(index) {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        lightbox.style.display = 'block';
+        lightboxImg.src = images[index].src;
+        currentIndex = index;
+    }
+
+    function closeLightbox() {
+        const lightbox = document.getElementById('lightbox');
+        lightbox.style.display = 'none';
+    }
+
+    function changeSlide(direction) {
+        currentIndex += direction;
+        if (currentIndex >= images.length) currentIndex = 0;
+        if (currentIndex < 0) currentIndex = images.length - 1;
+        document.getElementById('lightbox-img').src = images[currentIndex].src;
+    }
+
+    // Add event listeners to album images
     document.querySelectorAll('.album-images img').forEach((img, index) => {
         img.addEventListener('click', () => openLightbox(index));
     });
 
+    // Add event listeners to album elements
+    document.querySelectorAll('.album').forEach(album => {
+        const albumId = album.getAttribute('onclick').match(/'([^']+)'/)[1];
+        album.addEventListener('click', () => openAlbum(albumId));
+    });
+
+    // Ensure that the close button and navigation buttons for the lightbox are functional
+    document.querySelector('.close').addEventListener('click', closeLightbox);
+    document.querySelector('.prev').addEventListener('click', () => changeSlide(-1));
+    document.querySelector('.next').addEventListener('click', () => changeSlide(1));
+});
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Smooth scroll
+        });
+    }

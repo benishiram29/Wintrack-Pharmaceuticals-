@@ -154,45 +154,7 @@
             <a class="next lightbox-nav" onclick="changeSlide(1)">&#10095;</a>
         </div>
 
-        <script>
-            let currentIndex = 0;
-            let images = [];
-
-            function openAlbum(albumId) {
-                const albums = document.querySelectorAll('.album-images');
-                albums.forEach(album => {
-                    album.style.display = 'none';
-                });
-                const album = document.getElementById(albumId);
-                album.style.display = 'block';
-                images = Array.from(album.getElementsByTagName('img'));
-                currentIndex = 0; // Reset index
-            }
-
-            function openLightbox(index) {
-                const lightbox = document.getElementById('lightbox');
-                const lightboxImg = document.getElementById('lightbox-img');
-                lightbox.style.display = 'block';
-                lightboxImg.src = images[index].src;
-                currentIndex = index;
-            }
-
-            function closeLightbox() {
-                const lightbox = document.getElementById('lightbox');
-                lightbox.style.display = 'none';
-            }
-
-            function changeSlide(direction) {
-                currentIndex += direction;
-                if (currentIndex >= images.length) currentIndex = 0;
-                if (currentIndex < 0) currentIndex = images.length - 1;
-                document.getElementById('lightbox-img').src = images[currentIndex].src;
-            }
-
-            document.querySelectorAll('.album-images img').forEach((img, index) => {
-                img.addEventListener('click', () => openLightbox(index));
-            });
-        </script>
+       
     </main>
     <footer>
         <div class="container footer-content">
@@ -241,6 +203,12 @@
             <img src="whitelogo.png" alt="Wintrack Pharmaceutical Logo" class="footer-logo">
         </div>
     </footer>
+    <div class="bottom">
+        <!-- Footer content -->
+        <div class="bottom-arrow" onclick="scrollToTop()">
+            &#8593; <!-- This is the up arrow symbol. You can use an icon or image if you prefer. -->
+        </div>
+    </div>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <script src="index.js"></script>
