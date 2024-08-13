@@ -42,3 +42,32 @@ window.addEventListener('touchstart', function() {
     header.classList.remove('hidden');
 });
 
+    // Function to open an album and scroll to the album detail section
+    function openAlbum(albumId) {
+        console.log("Opening album:", albumId); // Log to verify the function is being called
+
+        // Hide all album detail sections
+        document.querySelectorAll('.album-images').forEach(album => {
+            album.style.display = 'none';
+        });
+        
+        // Show the selected album detail section
+        const album = document.getElementById(albumId);
+        if (album) { // Check if the album exists
+            album.style.display = 'block';
+
+            // Smoothly scroll to the selected album detail section
+            album.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        } else {
+            console.error("Album with ID", albumId, "not found");
+        }
+    }
+
+    // Add event listeners to each album image to open lightbox
+    document.querySelectorAll('.album-images img').forEach((img, index) => {
+        img.addEventListener('click', () => openLightbox(index));
+    });
+
