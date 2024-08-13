@@ -106,12 +106,12 @@ main {
 }
 
 .hero-slider {
-    background: url('background.jpg') no-repeat center center/cover;
+    background: url('bacckground.png') no-repeat center center/cover;
     animation: zoomInOut 10s ease-in-out;
     color: white;
     padding: 150px 0;
     text-align: center;
-    min-height: 750px;
+    min-height: 820px;
     position: relative;
     overflow: hidden;
     transition: opacity 2s ease-in-out;
@@ -162,12 +162,9 @@ main {
 
 .hero-slider p1 {
     font-size: 2em;
-    color: black;
+    color: white;
     font-family: 'Times New Roman', Times, serif;
-    text-shadow: -1px -1px 0 #fff,
-        1px -1px 0 #fff,
-        -1px 1px 0 #fff,
-        1px 1px 0 #fff;
+  
     font-weight: 550;
 }
 
@@ -175,30 +172,60 @@ main {
     font-family: 'Times New Roman', Times, serif;
     font-size: 4em;
     margin: 0;
-    color: black;
-    text-shadow: -1px -1px 0 #fff,
-        1px -1px 0 #fff,
-        -1px 1px 0 #fff,
-        1px 1px 0 #fff;
+    color: white;
+    text-shadow: -1px -1px 0 black,
+        1px -1px 0 white,
+        -1px 1px 0 black,
+        1px 1px 0 black;
 }
 
 .hero-slider p {
     font-size: 3em;
-    color: black;
+    color: white;
     font-family: 'Times New Roman', Times, serif;
-    text-shadow: -1px -1px 0 #fff,
-        1px -1px 0 #fff,
-        -1px 1px 0 #fff,
-        1px 1px 0 #fff;
+   
 }
-
 
 .hero-slide {
     display: none;
 }
 
+.hero-text {
+    position: relative;
+}
+
 .hero-slide.active {
     display: block;
+}
+
+.read-more-container {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.horizontal-line {
+    display: inline-block;
+    width: 90px; 
+    height: 2px; 
+    background-color: white; 
+    vertical-align: middle; 
+}
+
+.read-more {
+    display: inline-block;
+    padding: 10px 20px; 
+    border: 2px solid white; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    color: white; 
+    background-color: transparent; 
+    font-weight: bold; 
+    transition: color 0.3s;
+}
+
+.read-more:hover {
+    color: #2b83e0; /* Adjust the hover color as needed */
 }
 
 .arrow {
@@ -523,7 +550,9 @@ section p {
 
 #inauguration .image-gallery p,
 #malaysia .image-gallery p,
-#thailand .image-gallery p {
+#thailand .image-gallery p, 
+#asiapacific .image-gallery p,
+#biennial .image-gallery p{
     font-size: 1.2em;
     color: #333;
     line-height: 1.6;
@@ -542,7 +571,9 @@ section p {
 
 #inauguration .image-gallery h3,
 #malaysia .image-gallery h3,
-#thailand .image-gallery h3 {
+#thailand .image-gallery h3, 
+#asiapacific .image-gallery h3,
+#biennial .image-gallery h3{
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.7em;
 }
@@ -904,7 +935,11 @@ footer {
     margin: 0;
     font-size: 14px;
     color: black;
-    margin-left: 750px;
+    margin-left: 400px;
+}
+
+.footer-bottom img{
+    margin-right: 400px;
 }
 
 .footer-logo {
