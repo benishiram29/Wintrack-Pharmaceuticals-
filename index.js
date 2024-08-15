@@ -24,8 +24,28 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize first slide
     showSlide(currentSlide);
 });
+
 let lastScrollTop = 0;
 const header = document.querySelector('header');
+
+window.addEventListener('scroll', function() {
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+        // Scroll Down
+        header.classList.add('hidden');
+    } else {
+        // Scroll Up
+        header.classList.remove('hidden');
+    }
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+});
+
+// Optional: Handle touch events for mobile devices
+window.addEventListener('touchstart', function() {
+    header.classList.remove('hidden');
+});
+
 
 document.addEventListener('DOMContentLoaded', () => {
     let currentIndex = 0;
