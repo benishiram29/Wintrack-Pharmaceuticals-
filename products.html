@@ -16,7 +16,7 @@
     <header>
         <div class="container">
             <img src="logo.png" alt="Wintrack Pharmaceutical Logo" class="logo">
-            <h1>Wintrack Pharmaceutical</h1>
+            <h1>Wintrack Pharmaceuticals</h1>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -70,13 +70,13 @@
                         <img src="10.jpg" alt="Product 4">
                     </div>
                     <div class="product-item" style="display: none;">
-                        <img src="11.jpg" alt="Product 4">
+                        <img src="11.png" alt="Product 4">
                     </div>
                     <div class="product-item" style="display: none;">
-                        <img src="12.jpg" alt="Product 4">
+                        <img src="12.png" alt="Product 4">
                     </div>
                     <div class="product-item" style="display: none;">
-                        <img src="13.jpg" alt="Product 4">
+                        <img src="13.png" alt="Product 4">
                     </div>
                     <div class="product-item" style="display: none;">
                         <img src="14.jpg" alt="Product 4">
@@ -145,31 +145,56 @@
                         <img src="35.jpg" alt="Product 4">
                     </div>
                 </div>
-                <br><br><button id="viewMoreBtn">View More</button>
+                <br><br>
+                <div class="button-container">
+                <button id="viewMoreBtn">View More</button></div>
             </div>
         </section>
 
         <script>
             document.addEventListener('DOMContentLoaded', function () {
                 const initiallyVisibleCount = 4; // Number of products to show initially
+                const incrementCount = 2; // Number of products to show/hide at a time
                 const hiddenItems = document.querySelectorAll('.product-item');
-
+                const viewMoreBtn = document.getElementById('viewMoreBtn');
+                const buttonContainer = document.querySelector('.button-container');
+                const viewLessBtn = document.createElement('button');
+        
+                viewLessBtn.id = 'viewLessBtn';
+                viewLessBtn.textContent = 'View Less';
+                viewLessBtn.style.display = 'none'; // Initially hide the "View Less" button
+                buttonContainer.appendChild(viewLessBtn); // Add the "View Less" button in the same container
+        
                 // Initially show the first set of products
                 for (let i = 0; i < initiallyVisibleCount && i < hiddenItems.length; i++) {
                     hiddenItems[i].style.display = 'block';
                 }
-
-                document.getElementById('viewMoreBtn').addEventListener('click', function () {
+        
+                viewMoreBtn.addEventListener('click', function () {
                     const hiddenItems = document.querySelectorAll('.product-item[style="display: none;"]');
-                    for (let i = 0; i < 2 && i < hiddenItems.length; i++) {
+                    for (let i = 0; i < incrementCount && i < hiddenItems.length; i++) {
                         hiddenItems[i].style.display = 'block';
                     }
-                    if (hiddenItems.length <= 2) {
-                        this.style.display = 'none'; // Hide the button if no more items to show
+                    if (hiddenItems.length <= incrementCount) {
+                        viewMoreBtn.style.display = 'none'; // Hide the "View More" button if no more items to show
                     }
+                    viewLessBtn.style.display = 'block'; // Show the "View Less" button when items are revealed
+                });
+        
+                viewLessBtn.addEventListener('click', function () {
+                    const visibleItems = document.querySelectorAll('.product-item[style="display: block;"]');
+                    for (let i = 0; i < incrementCount && visibleItems.length > initiallyVisibleCount; i++) {
+                        visibleItems[visibleItems.length - 1 - i].style.display = 'none';
+                    }
+                    if (visibleItems.length <= initiallyVisibleCount + incrementCount) {
+                        viewLessBtn.style.display = 'none'; // Hide the "View Less" button if no more items to hide
+                    }
+                    viewMoreBtn.style.display = 'block'; // Show the "View More" button again when items are hidden
                 });
             });
         </script>
+        
+        
 
 
     </main>
@@ -177,7 +202,7 @@
     <footer>
         <div class="container footer-content">
             <div class="footer-left">
-                <p><i style="color: #d3d0d0;">Wintrack Pharmaceutical</i><br><br>
+                <p><i style="color: #d3d0d0;">Wintrack Pharmaceuticals</i><br><br>
                     𝐖𝐢𝐧𝐭𝐫𝐚𝐜𝐤 𝐏𝐡𝐚𝐫𝐦𝐚𝐜𝐞𝐮𝐭𝐢𝐜𝐚𝐥𝐬 has very highly professional team in all departments
                     of the company.</p>
             </div>

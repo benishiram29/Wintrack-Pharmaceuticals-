@@ -16,7 +16,7 @@
     <header>
         <div class="container">
             <img src="logo.png" alt="Wintrack Pharmaceutical Logo" class="logo">
-            <h1>Wintrack Pharmaceutical</h1>
+            <h1>Wintrack Pharmaceuticals</h1>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -36,7 +36,7 @@
                 <div class="hero-slide">
                     <div class="hero-slider-content">
                         <div class="hero-text">
-                            <h2>Welcome to Wintrack Pharmaceutical</h2>
+                            <h2>Welcome to Wintrack Pharmaceuticals</h2>
                             <p>One of the Pioneers in Pakistan Pharmaceutical Industry.</p>
                             <p1>At Wintrack, we dedicate ourselves to innovation in Pharmaceutical Products.</p1>
                             <br><br> <br><br> <br><br><span class="horizontal-line"></span><br>
@@ -117,6 +117,20 @@
         </section>
 
         <script>
+
+            document.querySelectorAll('.read-more').forEach(function (anchor) {
+                anchor.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    const offset = target.getBoundingClientRect().top + window.scrollY - 50; // Adjust '50' to match the desired offset
+                    window.scrollTo({
+                        top: offset,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+
             const images = [
                 'bacckground.png',
                 'bacckground1.jpg',
@@ -142,7 +156,7 @@
                 }, 2000); // Wait for the fade-out to complete before changing the image
             }
 
-            setInterval(changeBackgroundImage, 10000); 
+            setInterval(changeBackgroundImage, 10000);
 
         </script>
         <script>
@@ -248,13 +262,13 @@
                         <img src="10.jpg" alt="Product 4">
                     </div>
                     <div class="product-item" style="display: none;">
-                        <img src="11.jpg" alt="Product 4">
+                        <img src="11.png" alt="Product 4">
                     </div>
                     <div class="product-item" style="display: none;">
-                        <img src="12.jpg" alt="Product 4">
+                        <img src="12.png" alt="Product 4">
                     </div>
                     <div class="product-item" style="display: none;">
-                        <img src="13.jpg" alt="Product 4">
+                        <img src="13.png" alt="Product 4">
                     </div>
                     <div class="product-item" style="display: none;">
                         <img src="14.jpg" alt="Product 4">
@@ -314,7 +328,7 @@
                         <img src="32.jpg" alt="Product 4">
                     </div>
                 </div>
-                <br><a href="products.html" id="viewMoreBtn" class="btn">View More</a>
+                <br><br><a href="products.html" id="viewMoreBtn" class="btn">View More</a>
 
             </div>
         </section>
@@ -336,7 +350,7 @@
     <footer>
         <div class="container footer-content">
             <div class="footer-left">
-                <p><i style="color: #d3d0d0;">Wintrack Pharmaceutical</i><br><br>
+                <p><i style="color: #d3d0d0;">Wintrack Pharmaceuticals</i><br><br>
                     𝐖𝐢𝐧𝐭𝐫𝐚𝐜𝐤 𝐏𝐡𝐚𝐫𝐦𝐚𝐜𝐞𝐮𝐭𝐢𝐜𝐚𝐥𝐬 has very highly professional team in all departments
                     of the company.</p>
             </div>
