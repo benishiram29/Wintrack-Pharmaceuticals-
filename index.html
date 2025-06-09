@@ -13,6 +13,110 @@
 </head>
 
 <body>
+<!-- 🌟 Start of Responsive Navbar with Hamburger Menu -->
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    color: white;
+    padding: 10px 20px;
+    position: relative;
+  }
+
+  .navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .nav-links li a:hover {
+    color: #ff69b4;
+  }
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background: #333;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      width: 200px;
+      padding: 10px;
+      z-index: 999;
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+  }
+</style>
+
+<nav class="navbar">
+  <div class="logo">PrincessSite</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById('navLinks');
+    nav.classList.toggle('active');
+  }
+</script>
+<!-- 🌟 End of Responsive Navbar -->
+
+    
     <header>
         <div class="container">
             <img src="logo.png" alt="Wintrack Pharmaceutical Logo" class="logo">
