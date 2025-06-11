@@ -13,12 +13,28 @@
 </head>
 
 <body>
+    <script>
+        function toggleDrawer() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('open');
+        }
+    </script>
     <header>
-        <div class="container">
-            <img src="logo.png" alt="Wintrack Pharmaceutical Logo" class="logo">
-            <h1>Wintrack Pharmaceuticals</h1>
-            <nav>
-                <ul>
+        <div class="headerMainDiv">
+            <div class="headerlogoWithText">
+                <img src="logo.png" alt="Wintrack Pharmaceutical Logo" class="logo">
+                <h1>Wintrack Pharmaceuticals</h1>
+            </div>
+
+            <!-- Hamburger Button -->
+            <button class="hamburger" onclick="toggleDrawer()">☰</button>
+
+            <!-- Nav Menu -->
+            <nav class="navbarLinks">
+                <ul id="navMenu">
+                    <!-- Close Button -->
+                    <button class="close-btn" onclick="toggleDrawer()">×</button>
+
                     <li><a href="index.html">Home</a></li>
                     <li><a href="aboutus.html">About Us</a></li>
                     <li><a href="products.html">Products</a></li>
@@ -30,35 +46,31 @@
         </div>
     </header>
 
+
     <main>
 
         <section id="about">
             <div class="container">
                 <br><br><br>
                 <h2><b>About Us</b></h2>
-                <p>Welcome to 𝐖𝐢𝐧𝐭𝐫𝐚𝐜𝐤 𝐏𝐡𝐚𝐫𝐦𝐚𝐜𝐞𝐮𝐭𝐢𝐜𝐚𝐥𝐬, a leading name in the pharmaceutical
-                    industry dedicated to enhancing health and improving lives. With a commitment to innovation,
-                    quality, and excellence, we strive to create a significant impact in the healthcare sector.</p>
+                <p>Welcome to 𝐖𝐢𝐧𝐭𝐫𝐚𝐜𝐤 𝐏𝐡𝐚𝐫𝐦𝐚𝐜𝐞𝐮𝐭𝐢𝐜𝐚𝐥𝐬, a leading name in the pharmaceutical industry dedicated to enhancing health and improving lives. With a commitment to innovation, quality, and excellence, we strive to create
+                    a significant impact in the healthcare sector.</p>
                 <br><br>
                 <div class="team-member">
                     <img src="chiefpatron.jpg" alt="Cheif Patron Photo">
                     <h3>Syed Qamaruddin, <span style="font-size: 0.6em;">Chief Patron</span></h3>
-                    <p>As the Chief Patron, 𝐒𝐲𝐞𝐝 𝐐𝐚𝐦𝐚𝐫𝐮𝐝𝐝𝐢𝐧 provides invaluable guidance and support,
-                        helping shape our strategic direction and uphold our commitment to excellence.</p>
+                    <p>As the Chief Patron, 𝐒𝐲𝐞𝐝 𝐐𝐚𝐦𝐚𝐫𝐮𝐝𝐝𝐢𝐧 provides invaluable guidance and support, helping shape our strategic direction and uphold our commitment to excellence.</p>
                 </div><br>
                 <div class="team-member">
                     <img src="ceo.jpg" alt="CEO Photo">
                     <h3>Syed Moinuddin, <span style="font-size: 0.6em;">CEO</span></h3>
-                    <p>𝐒𝐲𝐞𝐝 𝐌𝐨𝐢𝐧𝐮𝐝𝐝𝐢𝐧 brings over 25 years of experience in the pharmaceutical industry and
-                        leads our team with a vision for innovation and excellence.</p>
+                    <p>𝐒𝐲𝐞𝐝 𝐌𝐨𝐢𝐧𝐮𝐝𝐝𝐢𝐧 brings over 25 years of experience in the pharmaceutical industry and leads our team with a vision for innovation and excellence.</p>
                 </div>
 
                 <br><br>
                 <h2><b>Company Profile</b></h2><br>
-                <h4>𝐖𝐢𝐧𝐭𝐫𝐚𝐜𝐤 𝐏𝐡𝐚𝐫𝐦𝐚𝐜𝐞𝐮𝐭𝐢𝐜𝐚𝐥𝐬 has very highly professional
-                    team in all departments of the company.<br><br>
-                    𝐖𝐢𝐧𝐭𝐫𝐚𝐜𝐤 𝐏𝐡𝐚𝐫𝐦𝐚𝐜𝐞𝐮𝐭𝐢𝐜𝐚𝐥𝐬 has grown from a small startup into a leading provider of innovative health solutions. 
-                    Our journey began with a vision to revolutionize the pharmaceutical industry, and we have remained committed to that vision ever since.
+                <h4>𝐖𝐢𝐧𝐭𝐫𝐚𝐜𝐤 𝐏𝐡𝐚𝐫𝐦𝐚𝐜𝐞𝐮𝐭𝐢𝐜𝐚𝐥𝐬 has very highly professional team in all departments of the company.<br><br> 𝐖𝐢𝐧𝐭𝐫𝐚𝐜𝐤 𝐏𝐡𝐚𝐫𝐦𝐚𝐜𝐞𝐮𝐭𝐢𝐜𝐚𝐥𝐬 has grown from a small startup into a leading provider of innovative
+                    health solutions. Our journey began with a vision to revolutionize the pharmaceutical industry, and we have remained committed to that vision ever since.
                 </h4><br>
                 <div class="info-box">
                     <div class="info-box-item left">
@@ -71,10 +83,9 @@
                         <h3>𝐎𝐮𝐫 𝐕𝐚𝐥𝐮𝐞𝐬</h3>
                     </div>
                     <h5>To Be Open & 𝗛𝗼𝗻𝗲𝘀𝘁,<br> Whatever 𝗪𝗲 𝗗𝗼, We Do 𝗜𝘁 𝗥𝗶𝗴𝗵𝘁.</h5><br>
-                    <p2>We Aim to Conduct our Business based on the Highest Moral and Ethical standards, becoming a
-                        Prominent and Trusted leader in the Pharmaceutical Distribution Industry,
-                        and making a Significant contribution to society through the Effective Utilization of our Unique
-                        Strengths.</p2>
+                    <p2>We Aim to Conduct our Business based on the Highest Moral and Ethical standards, becoming a Prominent and Trusted leader in the Pharmaceutical Distribution Industry, and making a Significant contribution to society through the Effective
+                        Utilization of our Unique Strengths.
+                    </p2>
                 </div>
         </section>
 
@@ -82,25 +93,18 @@
         <section id="ideology">
             <div class="container">
                 <h2>Company Profile</h2>
-                <p>We also arrange training programs for our team to boost their professional capabilities and better
-                    satisfy our customers for improved compliance.
-
-                    We have people on board who have expertise in marketing strategies and market research.
-
-                    We ensure prompt supply through our excellent transport network. 𝐖𝐢𝐧𝐭𝐫𝐚𝐜𝐤 𝐏𝐡𝐚𝐫𝐦𝐚𝐜𝐞𝐮𝐭𝐢𝐜𝐚𝐥𝐬 has been and will
-                    continue to expand its business in medicine. We are committed to providing products that exceed our
-                    customers' expectations.</p>
+                <p>We also arrange training programs for our team to boost their professional capabilities and better satisfy our customers for improved compliance. We have people on board who have expertise in marketing strategies and market research. We
+                    ensure prompt supply through our excellent transport network. 𝐖𝐢𝐧𝐭𝐫𝐚𝐜𝐤 𝐏𝐡𝐚𝐫𝐦𝐚𝐜𝐞𝐮𝐭𝐢𝐜𝐚𝐥𝐬 has been and will continue to expand its business in medicine. We are committed to providing products that exceed our customers'
+                    expectations.
+                </p>
             </div>
         </section>
 
         <section id="history">
             <div class="container">
                 <h2>Our History</h2>
-                <p>The origin of Wintrack started from a pharmacy in Sukkur, which then turned into a distribution
-                    business and finally became a pharmaceutical company in Karachi in 2010.
-                    These milestones were not just due to luck but the result of hard work day and night with
-                    dedication. The aim was to <b style="font-weight: 500;">Create a Difference for Success!</b><br><br>
-                    Today, Wintrack stands as one of the leading pharma companies in Pakistan with more than <b style="font-weight: 500;">120 field
+                <p>The origin of Wintrack started from a pharmacy in Sukkur, which then turned into a distribution business and finally became a pharmaceutical company in Karachi in 2010. These milestones were not just due to luck but the result of hard
+                    work day and night with dedication. The aim was to <b style="font-weight: 500;">Create a Difference for Success!</b><br><br> Today, Wintrack stands as one of the leading pharma companies in Pakistan with more than <b style="font-weight: 500;">120 field
                         force</b> members working across the country.</p>
             </div>
         </section>
@@ -110,20 +114,17 @@
     <footer>
         <div class="container footer-content">
             <div class="footer-left">
-                <p><i style="color: #d3d0d0;">Wintrack Pharmaceuticals</i><br><br>
-                    𝐖𝐢𝐧𝐭𝐫𝐚𝐜𝐤 𝐏𝐡𝐚𝐫𝐦𝐚𝐜𝐞𝐮𝐭𝐢𝐜𝐚𝐥𝐬 has very highly professional team in all departments
-                    of the company.</p>
+                <p><i style="color: #d3d0d0;">Wintrack Pharmaceuticals</i><br><br> 𝐖𝐢𝐧𝐭𝐫𝐚𝐜𝐤 𝐏𝐡𝐚𝐫𝐦𝐚𝐜𝐞𝐮𝐭𝐢𝐜𝐚𝐥𝐬 has very highly professional team in all departments of the company.</p>
             </div>
             <div class="footer-center footer-info">
-                <p><i class="fas fa-map-marker-alt"></i> Address: B, 115, Block 3 Gulshan-e-Iqbal, Karachi, Karachi
-                    City, Sindh</p>
+                <p><i class="fas fa-map-marker-alt"></i> Address: B, 115, Block 3 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh</p>
                 <hr class="footer-divider">
                 <p><i class="fas fa-phone-alt"></i> Phone: <a href="tel:02134814060">+92 213 481 4060</a></p>
                 <hr class="footer-divider">
-                <p><i class="fas fa-envelope"></i> Email: 
-                    <a href="mailto:info@wintrackpharma.com">info@wintrackpharma.com</a> | 
+                <p><i class="fas fa-envelope"></i> Email:
+                    <a href="mailto:info@wintrackpharma.com">info@wintrackpharma.com</a> |
                     <a href="mailto:wintrackpharma@yahoo.com">wintrackpharma@yahoo.com</a>
-                </p> 
+                </p>
                 <hr class="footer-divider">
             </div>
 
@@ -131,16 +132,13 @@
                 <p>Stay Connected with Us!</p>
                 <hr class="divider-line">
                 <div class="social-media-icons">
-                    <a href="https://www.instagram.com/wintrack.pharma_official?igsh=ZWcxamNwZmFndGg0" target="_blank"
-                        class="social-icon" aria-label="Instagram">
+                    <a href="https://www.instagram.com/wintrack.pharma_official?igsh=ZWcxamNwZmFndGg0" target="_blank" class="social-icon" aria-label="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://www.linkedin.com/company/wintrack-pharmaceuticals/mycompany" target="_blank"
-                        class="social-icon" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/company/wintrack-pharmaceuticals/mycompany" target="_blank" class="social-icon" aria-label="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="https://www.facebook.com/wintrackpharma" target="_blank" class="social-icon"
-                        aria-label="Facebook">
+                    <a href="https://www.facebook.com/wintrackpharma" target="_blank" class="social-icon" aria-label="Facebook">
                         <i class="fab fa-facebook-f"></i>
                     </a>
                 </div>
@@ -157,10 +155,11 @@
     <div class="bottom">
         <!-- Footer content -->
         <div class="bottom-arrow" onclick="scrollToTop()">
-            &#8593; <!-- This is the up arrow symbol. You can use an icon or image if you prefer. -->
+            &#8593;
+            <!-- This is the up arrow symbol. You can use an icon or image if you prefer. -->
         </div>
     </div>
-    
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
