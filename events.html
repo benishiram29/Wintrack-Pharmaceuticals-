@@ -13,28 +13,12 @@
 </head>
 
 <body>
-    <script>
-        function toggleDrawer() {
-            const navMenu = document.getElementById('navMenu');
-            navMenu.classList.toggle('open');
-        }
-    </script>
     <header>
-        <div class="headerMainDiv">
-            <div class="headerlogoWithText">
-                <img src="logo.png" alt="Wintrack Pharmaceutical Logo" class="logo">
-                <h1>Wintrack Pharmaceuticals</h1>
-            </div>
-
-            <!-- Hamburger Button -->
-            <button class="hamburger" onclick="toggleDrawer()">☰</button>
-
-            <!-- Nav Menu -->
-            <nav class="navbarLinks">
-                <ul id="navMenu">
-                    <!-- Close Button -->
-                    <button class="close-btn" onclick="toggleDrawer()">×</button>
-
+        <div class="container">
+            <img src="logo.png" alt="Wintrack Pharmaceutical Logo" class="logo">
+            <h1>Wintrack Pharmaceuticals</h1>
+            <nav>
+                <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="aboutus.html">About Us</a></li>
                     <li><a href="products.html">Products</a></li>
@@ -46,13 +30,13 @@
         </div>
     </header>
 
-
     <main>
         <section id="events">
             <div class="container">
                 <h2><b>Events</b></h2>
-                <p>Explore our memorable events and milestones that have shaped our journey. From Grand Inauguration to National & International Sales Conferences and Medical Conferences, each album captures the essence of our Dedication, Collaboration,
-                    and Success.</p>
+                <p>Explore our memorable events and milestones that have shaped our journey. From Grand Inauguration to
+                    National & International Sales Conferences and Medical Conferences, each album captures the essence of our Dedication,
+                    Collaboration, and Success.</p>
                 <div class="albums">
                     <div class="album" onclick="openAlbum('inauguration')">
                         <img src="inauguration.jpg" alt="Inauguration Ceremony">
@@ -68,7 +52,7 @@
                     </div>
                     <div class="album" onclick="openAlbum('asiapacific')">
                         <img src="asiapacific.jpg" alt="Asia  Pacific Conference">
-                        <p1>Asia Pacific Conference</p1>
+                        <p1>Asia  Pacific Conference</p1>
                     </div>
                     <div class="album" onclick="openAlbum('biennial')">
                         <img src="biennial.jpg" alt="Biennial Intern Conference">
@@ -77,13 +61,14 @@
                 </div>
             </div>
         </section>
-
+        
         <!-- Hidden album containers -->
         <div id="inauguration" class="album-images">
             <div class="image-gallery">
                 <h3><b>Inauguration Ceremony</b></h3><br>
-                <p>On June 15, 2019, Wintrack marked its first footprints in Karachi by opening its head office there. The day was also marked by the launch of Wintrack’s new product, "Welmide." The company's Chief Patron, Mr. Syed Qamaruddin, inaugurated
-                    the office as the Chief Guest.</p><br>
+                <p>On June 15, 2019, Wintrack marked its first footprints in Karachi by opening its head office there.
+                    The day was also marked by the launch of Wintrack’s new product, "Welmide."
+                    The company's Chief Patron, Mr. Syed Qamaruddin, inaugurated the office as the Chief Guest.</p><br>
                 <img src="inauguration.jpg" alt="Image 1">
                 <img src="inauguration2.jpg" alt="Image 3">
                 <img src="inauguration4.jpg" alt="Image 5">
@@ -95,8 +80,8 @@
         <div id="malaysia" class="album-images">
             <div class="image-gallery">
                 <h3><b>Malaysia Conference</b></h3><br>
-                <p>The 4th Annual Sales Conference 2020 was held in Malaysia, where the company's sales strategies, achievements, and future goals were discussed with the team. Top performers were recognized with awards, and a celebratory event was organized
-                    to inspire and motivate the entire team.
+                <p>The 4th Annual Sales Conference 2020 was held in Malaysia, where the company's sales strategies, achievements, and future goals were discussed with the team.
+                     Top performers were recognized with awards, and a celebratory event was organized to inspire and motivate the entire team.
                 </p><br>
                 <img src="malaysia.jpg" alt="Image 1">
                 <img src="malaysia1.jpg" alt="Image 2">
@@ -121,7 +106,9 @@
         <div id="thailand" class="album-images">
             <div class="image-gallery">
                 <h3><b>Thailand Annual Conference</b></h3><br>
-                <p>The Annual Conference 2018 was held in Thailand, where the company's performance, targets, and growth were discussed with the team. Furthermore, awards were given to top performers, and a celebration was held to boost team morale.
+                <p>The Annual Conference 2018 was held in Thailand, where the company's performance, targets, and growth
+                    were discussed with the team.
+                    Furthermore, awards were given to top performers, and a celebration was held to boost team morale.
                 </p><br>
                 <img src="thailand.JPG" alt="Image 1">
                 <img src="thailand1.jpg" alt="Image 2">
@@ -135,15 +122,15 @@
                 <img src="thailand11.jpg" alt="Image 12">
                 <img src="thailand12.jpg" alt="Image 13">
                 <img src="thailand14.jpg" alt="Image 15">
-            </div>
+            </div>         
         </div>
 
         <div id="asiapacific" class="album-images">
             <div class="image-gallery">
                 <h3><b>Asia Pacific Conference</b></h3><br>
-                <p>On March 22, the 17th Asia Pacific Conference, a prominent medical conference, was held in Karachi. The event provided a platform for discussing the latest advancements in the pharmaceutical sector and engaging with industry leaders, facilitated
-                    independently.
-                </p><br>
+                <p>On March 22, the 17th Asia Pacific Conference, a prominent medical conference, was held in Karachi. 
+                    The event provided a platform for discussing the latest advancements in the pharmaceutical sector and engaging with industry leaders, 
+                    facilitated independently.</p><br>
                 <img src="asiapacific.jpg" alt="Image 1">
                 <img src="asiapacific2.jpg" alt="Image 3">
             </div>
@@ -152,13 +139,14 @@
         <div id="biennial" class="album-images">
             <div class="image-gallery">
                 <h3><b>Biennial Intern Peads Conference Karachi</b></h3><br>
-                <p>The 26th Biennial Intern Peads Conference was held in Karachi, focusing on the latest advancements and research in pediatric care. The conference brought together leading experts and practitioners to share insights, discuss emerging trends,
-                    and enhance collaborative efforts in the field of pediatric medicine.</p><br>
+                <p>The 26th Biennial Intern Peads Conference was held in Karachi, focusing on the latest advancements and research in pediatric care. 
+                    The conference brought together leading experts and practitioners to share insights, discuss emerging trends,
+                     and enhance collaborative efforts in the field of pediatric medicine.</p><br>
                 <img src="biennial.jpg" alt="Image 1">
                 <img src="biennial2.jpg" alt="Image 3">
             </div>
         </div>
-
+        
         <div id="lightbox" class="lightbox">
             <span class="close" onclick="closeLightbox()">&times;</span>
             <img class="lightbox-content" id="lightbox-img">
@@ -166,22 +154,25 @@
             <a class="next lightbox-nav" onclick="changeSlide(1)">&#10095;</a>
         </div>
 
-
+       
     </main>
     <footer>
         <div class="container footer-content">
             <div class="footer-left">
-                <p><i style="color: #d3d0d0;">Wintrack Pharmaceuticals</i><br><br> 𝐖𝐢𝐧𝐭𝐫𝐚𝐜𝐤 𝐏𝐡𝐚𝐫𝐦𝐚𝐜𝐞𝐮𝐭𝐢𝐜𝐚𝐥𝐬 has very highly professional team in all departments of the company.</p>
+                <p><i style="color: #d3d0d0;">Wintrack Pharmaceuticals</i><br><br>
+                    𝐖𝐢𝐧𝐭𝐫𝐚𝐜𝐤 𝐏𝐡𝐚𝐫𝐦𝐚𝐜𝐞𝐮𝐭𝐢𝐜𝐚𝐥𝐬 has very highly professional team in all departments
+                    of the company.</p>
             </div>
             <div class="footer-center footer-info">
-                <p><i class="fas fa-map-marker-alt"></i> Address: B, 115, Block 3 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh</p>
+                <p><i class="fas fa-map-marker-alt"></i> Address: B, 115, Block 3 Gulshan-e-Iqbal, Karachi, Karachi
+                    City, Sindh</p>
                 <hr class="footer-divider">
                 <p><i class="fas fa-phone-alt"></i> Phone: <a href="tel:02134814060">+92 213 481 4060</a></p>
                 <hr class="footer-divider">
-                <p><i class="fas fa-envelope"></i> Email:
-                    <a href="mailto:info@wintrackpharma.com">info@wintrackpharma.com</a> |
+                <p><i class="fas fa-envelope"></i> Email: 
+                    <a href="mailto:info@wintrackpharma.com">info@wintrackpharma.com</a> | 
                     <a href="mailto:wintrackpharma@yahoo.com">wintrackpharma@yahoo.com</a>
-                </p>
+                </p> 
                 <hr class="footer-divider">
             </div>
 
@@ -189,13 +180,16 @@
                 <p>Stay Connected with Us!</p>
                 <hr class="divider-line">
                 <div class="social-media-icons">
-                    <a href="https://www.instagram.com/wintrack.pharma_official?igsh=ZWcxamNwZmFndGg0" target="_blank" class="social-icon" aria-label="Instagram">
+                    <a href="https://www.instagram.com/wintrack.pharma_official?igsh=ZWcxamNwZmFndGg0" target="_blank"
+                        class="social-icon" aria-label="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://www.linkedin.com/company/wintrack-pharmaceuticals/mycompany" target="_blank" class="social-icon" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/company/wintrack-pharmaceuticals/mycompany" target="_blank"
+                        class="social-icon" aria-label="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="https://www.facebook.com/wintrackpharma" target="_blank" class="social-icon" aria-label="Facebook">
+                    <a href="https://www.facebook.com/wintrackpharma" target="_blank" class="social-icon"
+                        aria-label="Facebook">
                         <i class="fab fa-facebook-f"></i>
                     </a>
                 </div>
@@ -212,8 +206,7 @@
     <div class="bottom">
         <!-- Footer content -->
         <div class="bottom-arrow" onclick="scrollToTop()">
-            &#8593;
-            <!-- This is the up arrow symbol. You can use an icon or image if you prefer. -->
+            &#8593; <!-- This is the up arrow symbol. You can use an icon or image if you prefer. -->
         </div>
     </div>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
