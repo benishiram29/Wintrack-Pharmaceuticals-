@@ -13,12 +13,28 @@
 </head>
 
 <body>
+    <script>
+        function toggleDrawer() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('open');
+        }
+    </script>
     <header>
-        <div class="container">
-            <img src="logo.png" alt="Wintrack Pharmaceutical Logo" class="logo">
-            <h1>Wintrack Pharmaceuticals</h1>
-            <nav>
-                <ul>
+        <div class="headerMainDiv">
+            <div class="headerlogoWithText">
+                <img src="logo.png" alt="Wintrack Pharmaceutical Logo" class="logo">
+                <h1>Wintrack Pharmaceuticals</h1>
+            </div>
+
+            <!-- Hamburger Button -->
+            <button class="hamburger" onclick="toggleDrawer()">☰</button>
+
+            <!-- Nav Menu -->
+            <nav class="navbarLinks">
+                <ul id="navMenu">
+                    <!-- Close Button -->
+                    <button class="close-btn" onclick="toggleDrawer()">×</button>
+
                     <li><a href="index.html">Home</a></li>
                     <li><a href="aboutus.html">About Us</a></li>
                     <li><a href="products.html">Products</a></li>
@@ -30,13 +46,14 @@
         </div>
     </header>
 
+
     <main>
 
         <section id="products">
             <div class="container">
-                <br><br><h2><b>Wintrack Brands</b></h2>
-                <p>We provide a diverse range of pharmaceutical products designed to meet your health needs, including
-                    prescription medications, over-the-counter drugs, and specialized treatments.</p><br>
+                <br><br>
+                <h2><b>Wintrack Brands</b></h2>
+                <p>We provide a diverse range of pharmaceutical products designed to meet your health needs, including prescription medications, over-the-counter drugs, and specialized treatments.</p><br>
                 <div class="product-grid">
                     <div class="product-item">
                         <img src="1.jpg" alt="Product 1">
@@ -147,30 +164,30 @@
                 </div>
                 <br><br>
                 <div class="button-container">
-                <button id="viewMoreBtn">View More</button></div>
+                    <button id="viewMoreBtn">View More</button></div>
             </div>
         </section>
 
         <script>
-            document.addEventListener('DOMContentLoaded', function () {
+            document.addEventListener('DOMContentLoaded', function() {
                 const initiallyVisibleCount = 4; // Number of products to show initially
                 const incrementCount = 2; // Number of products to show/hide at a time
                 const hiddenItems = document.querySelectorAll('.product-item');
                 const viewMoreBtn = document.getElementById('viewMoreBtn');
                 const buttonContainer = document.querySelector('.button-container');
                 const viewLessBtn = document.createElement('button');
-        
+
                 viewLessBtn.id = 'viewLessBtn';
                 viewLessBtn.textContent = 'View Less';
                 viewLessBtn.style.display = 'none'; // Initially hide the "View Less" button
                 buttonContainer.appendChild(viewLessBtn); // Add the "View Less" button in the same container
-        
+
                 // Initially show the first set of products
                 for (let i = 0; i < initiallyVisibleCount && i < hiddenItems.length; i++) {
                     hiddenItems[i].style.display = 'block';
                 }
-        
-                viewMoreBtn.addEventListener('click', function () {
+
+                viewMoreBtn.addEventListener('click', function() {
                     const hiddenItems = document.querySelectorAll('.product-item[style="display: none;"]');
                     for (let i = 0; i < incrementCount && i < hiddenItems.length; i++) {
                         hiddenItems[i].style.display = 'block';
@@ -180,8 +197,8 @@
                     }
                     viewLessBtn.style.display = 'block'; // Show the "View Less" button when items are revealed
                 });
-        
-                viewLessBtn.addEventListener('click', function () {
+
+                viewLessBtn.addEventListener('click', function() {
                     const visibleItems = document.querySelectorAll('.product-item[style="display: block;"]');
                     for (let i = 0; i < incrementCount && visibleItems.length > initiallyVisibleCount; i++) {
                         visibleItems[visibleItems.length - 1 - i].style.display = 'none';
@@ -193,8 +210,8 @@
                 });
             });
         </script>
-        
-        
+
+
 
 
     </main>
@@ -202,20 +219,17 @@
     <footer>
         <div class="container footer-content">
             <div class="footer-left">
-                <p><i style="color: #d3d0d0;">Wintrack Pharmaceuticals</i><br><br>
-                    𝐖𝐢𝐧𝐭𝐫𝐚𝐜𝐤 𝐏𝐡𝐚𝐫𝐦𝐚𝐜𝐞𝐮𝐭𝐢𝐜𝐚𝐥𝐬 has very highly professional team in all departments
-                    of the company.</p>
+                <p><i style="color: #d3d0d0;">Wintrack Pharmaceuticals</i><br><br> 𝐖𝐢𝐧𝐭𝐫𝐚𝐜𝐤 𝐏𝐡𝐚𝐫𝐦𝐚𝐜𝐞𝐮𝐭𝐢𝐜𝐚𝐥𝐬 has very highly professional team in all departments of the company.</p>
             </div>
             <div class="footer-center footer-info">
-                <p><i class="fas fa-map-marker-alt"></i> Address: B, 115, Block 3 Gulshan-e-Iqbal, Karachi, Karachi
-                    City, Sindh</p>
+                <p><i class="fas fa-map-marker-alt"></i> Address: B, 115, Block 3 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh</p>
                 <hr class="footer-divider">
                 <p><i class="fas fa-phone-alt"></i> Phone: <a href="tel:02134814060">+92 213 481 4060</a></p>
                 <hr class="footer-divider">
-                <p><i class="fas fa-envelope"></i> Email: 
-                    <a href="mailto:info@wintrackpharma.com">info@wintrackpharma.com</a> | 
+                <p><i class="fas fa-envelope"></i> Email:
+                    <a href="mailto:info@wintrackpharma.com">info@wintrackpharma.com</a> |
                     <a href="mailto:wintrackpharma@yahoo.com">wintrackpharma@yahoo.com</a>
-                </p> 
+                </p>
                 <hr class="footer-divider">
             </div>
 
@@ -223,16 +237,13 @@
                 <p>Stay Connected with Us!</p>
                 <hr class="divider-line">
                 <div class="social-media-icons">
-                    <a href="https://www.instagram.com/wintrack.pharma_official?igsh=ZWcxamNwZmFndGg0" target="_blank"
-                        class="social-icon" aria-label="Instagram">
+                    <a href="https://www.instagram.com/wintrack.pharma_official?igsh=ZWcxamNwZmFndGg0" target="_blank" class="social-icon" aria-label="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://www.linkedin.com/company/wintrack-pharmaceuticals/mycompany" target="_blank"
-                        class="social-icon" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/company/wintrack-pharmaceuticals/mycompany" target="_blank" class="social-icon" aria-label="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="https://www.facebook.com/wintrackpharma" target="_blank" class="social-icon"
-                        aria-label="Facebook">
+                    <a href="https://www.facebook.com/wintrackpharma" target="_blank" class="social-icon" aria-label="Facebook">
                         <i class="fab fa-facebook-f"></i>
                     </a>
                 </div>
@@ -249,7 +260,8 @@
     <div class="bottom">
         <!-- Footer content -->
         <div class="bottom-arrow" onclick="scrollToTop()">
-            &#8593; <!-- This is the up arrow symbol. You can use an icon or image if you prefer. -->
+            &#8593;
+            <!-- This is the up arrow symbol. You can use an icon or image if you prefer. -->
         </div>
     </div>
 

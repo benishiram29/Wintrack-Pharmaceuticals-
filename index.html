@@ -13,12 +13,29 @@
 </head>
 
 <body>
+    <script>
+        function toggleDrawer() {
+            const navMenu = document.getElementById('navMenu');
+            navMenu.classList.toggle('open');
+        }
+    </script>
+
     <header>
-        <div class="container">
-            <img src="logo.png" alt="Wintrack Pharmaceutical Logo" class="logo">
-            <h1>Wintrack Pharmaceuticals</h1>
-            <nav>
-                <ul>
+        <div class="headerMainDiv">
+            <div class="headerlogoWithText">
+                <img src="logo.png" alt="Wintrack Pharmaceutical Logo" class="logo">
+                <h1>Wintrack Pharmaceuticals</h1>
+            </div>
+
+            <!-- Hamburger Button -->
+            <button class="hamburger" onclick="toggleDrawer()">☰</button>
+
+            <!-- Nav Menu -->
+            <nav class="navbarLinks">
+                <ul id="navMenu">
+                    <!-- Close Button -->
+                    <button class="close-btn" onclick="toggleDrawer()">×</button>
+
                     <li><a href="index.html">Home</a></li>
                     <li><a href="aboutus.html">About Us</a></li>
                     <li><a href="products.html">Products</a></li>
@@ -29,6 +46,7 @@
             </nav>
         </div>
     </header>
+
 
     <main>
         <section id="home" class="hero-slider">
@@ -58,8 +76,7 @@
                     <div class="hero-slider-content">
                         <div class="hero-text">
                             <h2>Trusted Solutions for Patients</h2>
-                            <p1>Delivering reliable and innovative healthcare solutions tailored to meet the needs of
-                                our patients and ensure a brighter, healthier future.</p1>
+                            <p1>Delivering reliable and innovative healthcare solutions tailored to meet the needs of our patients and ensure a brighter, healthier future.</p1>
                             <br><br> <br><br> <br><br><span class="horizontal-line"></span><br>
                             <a href="#about" class="read-more">Read More</a>
                         </div>
@@ -103,8 +120,8 @@
                     <div class="hero-slider-content">
                         <div class="hero-text">
                             <h2>Committed to Patient Care</h2>
-                            <p1>Our mission is to enhance patient lives through effective and trusted pharmaceutical
-                                solutions.</p1>
+                            <p1>Our mission is to enhance patient lives through effective and trusted pharmaceutical solutions.
+                            </p1>
                             <br><br> <br><br> <br><br><span class="horizontal-line"></span><br>
                             <a href="#about" class="read-more">Read More</a>
                         </div>
@@ -117,9 +134,8 @@
         </section>
 
         <script>
-
-            document.querySelectorAll('.read-more').forEach(function (anchor) {
-                anchor.addEventListener('click', function (event) {
+            document.querySelectorAll('.read-more').forEach(function(anchor) {
+                anchor.addEventListener('click', function(event) {
                     event.preventDefault();
                     const target = document.querySelector(this.getAttribute('href'));
                     const offset = target.getBoundingClientRect().top + window.scrollY - 50; // Adjust '50' to match the desired offset
@@ -157,7 +173,6 @@
             }
 
             setInterval(changeBackgroundImage, 10000);
-
         </script>
         <script>
             document.addEventListener('DOMContentLoaded', () => {
@@ -186,7 +201,6 @@
                     showSlides();
                 }, 13000);
             });
-
         </script>
 
         <section id="about">
@@ -203,9 +217,8 @@
                         <h3>𝐎𝐮𝐫 𝐕𝐚𝐥𝐮𝐞𝐬</h3>
                     </div>
                     <h5>To Be Open & 𝗛𝗼𝗻𝗲𝘀𝘁,<br> Whatever 𝗪𝗲 𝗗𝗼, We Do 𝗜𝘁 𝗥𝗶𝗴𝗵𝘁.</h5><br>
-                    <p2>We Aim to Conduct our Business based on the Highest Moral and Ethical standards, becoming a
-                        Prominent and Trusted leader in the Pharmaceutical Distribution Industry, and making a
-                        Significant contribution to society through the Effective Utilization of our Unique Strengths.
+                    <p2>We Aim to Conduct our Business based on the Highest Moral and Ethical standards, becoming a Prominent and Trusted leader in the Pharmaceutical Distribution Industry, and making a Significant contribution to society through the Effective
+                        Utilization of our Unique Strengths.
                     </p2>
                 </div>
 
@@ -216,19 +229,15 @@
         <section id="ideology">
             <div class="container">
                 <h2><b>Company Ideology</b></h2>
-                <p> 𝐖𝐢𝐧𝐭𝐫𝐚𝐜𝐤 𝐏𝐡𝐚𝐫𝐦𝐚𝐜𝐞𝐮𝐭𝐢𝐜𝐚𝐥𝐬 always believe to supply those products that came
-                    with the stranded of G.M.P. and
-                    their molecules approved by F.D.A.
-                    We always ensure to maintain integrity of packaging & so guarantee, quality & potency of drug during
-                    shelf according to the instruction Government Ministry of Health.</p>
+                <p> 𝐖𝐢𝐧𝐭𝐫𝐚𝐜𝐤 𝐏𝐡𝐚𝐫𝐦𝐚𝐜𝐞𝐮𝐭𝐢𝐜𝐚𝐥𝐬 always believe to supply those products that came with the stranded of G.M.P. and their molecules approved by F.D.A. We always ensure to maintain integrity of packaging & so guarantee, quality
+                    & potency of drug during shelf according to the instruction Government Ministry of Health.</p>
             </div>
         </section>
 
         <section id="products">
             <div class="container">
                 <h2><b>Wintrack Brands</b></h2>
-                <p>We provide a diverse range of pharmaceutical products designed to meet your health needs, including
-                    prescription medications, over-the-counter drugs, and specialized treatments.</p><br>
+                <p>We provide a diverse range of pharmaceutical products designed to meet your health needs, including prescription medications, over-the-counter drugs, and specialized treatments.</p><br>
                 <div class="product-grid">
                     <div class="product-item">
                         <img src="1.jpg" alt="Product 1">
@@ -334,7 +343,7 @@
         </section>
 
         <script>
-            document.getElementById('viewMoreBtn').addEventListener('click', function () {
+            document.getElementById('viewMoreBtn').addEventListener('click', function() {
                 const hiddenItems = document.querySelectorAll('.product-item[style="display: none;"]');
                 for (let i = 0; i < 2 && i < hiddenItems.length; i++) {
                     hiddenItems[i].style.display = 'block';
@@ -350,13 +359,10 @@
     <footer>
         <div class="container footer-content">
             <div class="footer-left">
-                <p><i style="color: #d3d0d0;">Wintrack Pharmaceuticals</i><br><br>
-                    𝐖𝐢𝐧𝐭𝐫𝐚𝐜𝐤 𝐏𝐡𝐚𝐫𝐦𝐚𝐜𝐞𝐮𝐭𝐢𝐜𝐚𝐥𝐬 has very highly professional team in all departments
-                    of the company.</p>
+                <p><i style="color: #d3d0d0;">Wintrack Pharmaceuticals</i><br><br> 𝐖𝐢𝐧𝐭𝐫𝐚𝐜𝐤 𝐏𝐡𝐚𝐫𝐦𝐚𝐜𝐞𝐮𝐭𝐢𝐜𝐚𝐥𝐬 has very highly professional team in all departments of the company.</p>
             </div>
             <div class="footer-center footer-info">
-                <p><i class="fas fa-map-marker-alt"></i> Address: B, 115, Block 3 Gulshan-e-Iqbal, Karachi, Karachi
-                    City, Sindh</p>
+                <p><i class="fas fa-map-marker-alt"></i> Address: B, 115, Block 3 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh</p>
                 <hr class="footer-divider">
                 <p><i class="fas fa-phone-alt"></i> Phone: <a href="tel:02134814060">+92 213 481 4060</a></p>
                 <hr class="footer-divider">
@@ -371,16 +377,13 @@
                 <p>Stay Connected with Us!</p>
                 <hr class="divider-line">
                 <div class="social-media-icons">
-                    <a href="https://www.instagram.com/wintrack.pharma_official?igsh=ZWcxamNwZmFndGg0" target="_blank"
-                        class="social-icon" aria-label="Instagram">
+                    <a href="https://www.instagram.com/wintrack.pharma_official?igsh=ZWcxamNwZmFndGg0" target="_blank" class="social-icon" aria-label="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://www.linkedin.com/company/wintrack-pharmaceuticals/mycompany" target="_blank"
-                        class="social-icon" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/company/wintrack-pharmaceuticals/mycompany" target="_blank" class="social-icon" aria-label="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="https://www.facebook.com/wintrackpharma" target="_blank" class="social-icon"
-                        aria-label="Facebook">
+                    <a href="https://www.facebook.com/wintrackpharma" target="_blank" class="social-icon" aria-label="Facebook">
                         <i class="fab fa-facebook-f"></i>
                     </a>
                 </div>
@@ -397,7 +400,8 @@
     <div class="bottom">
         <!-- Footer content -->
         <div class="bottom-arrow" onclick="scrollToTop()">
-            &#8593; <!-- This is the up arrow symbol. You can use an icon or image if you prefer. -->
+            &#8593;
+            <!-- This is the up arrow symbol. You can use an icon or image if you prefer. -->
         </div>
     </div>
 
