@@ -258,9 +258,10 @@
                 for (let i = 0; i < 2 && i < hiddenItems.length; i++) {
                     hiddenItems[i].style.display = 'block';
                 }
-                if (hiddenItems.length <= 2) {
-                    this.style.display = 'none';
-                }
+                       if (remainingHidden.length === 0) {
+            this.style.display = 'none';
+        }
+
             });
         </script>
 
