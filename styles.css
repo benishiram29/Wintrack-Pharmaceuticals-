@@ -1123,7 +1123,16 @@
                                                         }
                                                         /* Added margin to separate the footer from the album images */
                                                     }
-                                                    
+                                                    footer {
+                                                            background-color: #444242;
+                                                            color: white;
+                                                            padding: 20px 0;
+                                                            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+                                                            position: relative;
+                                                            width: 100%;
+                                                            bottom: 0;
+                                                            margin-top: -20px;
+                                                        }
                                                     .footer-content {
                                                         display: flex;
                                                         justify-content: space-between;
