@@ -232,16 +232,19 @@
                                                         }
                                                         .hero-slider h2 {
                                                             font-family: 'Times New Roman', Times, serif;
-                                                            font-size: 2em;
+                                                            font-size: 1em;
                                                             margin: 0;
                                                             color: white;
                                                             text-shadow: -1px -1px 0 black, 1px -1px 0 white, -1px 1px 0 black, 1px 1px 0 black;
                                                         }
                                                         .hero-slider p1 {
-                                                            font-size: 1em;
+                                                            font-size: 0.9em;
                                                             color: white;
                                                             font-family: 'Times New Roman', Times, serif;
                                                             font-weight: 400;
+                                                        }
+                                                       .hero-slider p {
+                                                            font-size: 0.5em;
                                                         }
                                                     }
                                                     /* Main Content mobile screen close*/
