@@ -170,7 +170,7 @@
                                                         }
                                                         .hamburger {
                                                             display: block !important;
-                                                            margin-left: 70px;
+                                                            margin-left: 50px;
                                                         }
                                                         .navbarLinks ul {
                                                             position: fixed;
@@ -230,7 +230,7 @@
                                                             transition: opacity 2s ease-in-out;
                                                             opacity: 1;
                                                         }
-                                                             .hero-slider h2 {
+                                                        .hero-slider h2 {
                                                             font-family: 'Times New Roman', Times, serif;
                                                             font-size: 2rem !important;
                                                             margin: 0;
@@ -1127,7 +1127,7 @@
                                                         }
                                                         /* Added margin to separate the footer from the album images */
                                                     }
-                                                    footer {
+                                                      footer {
                                                             background-color: #444242;
                                                             color: white;
                                                             padding: 20px 0;
