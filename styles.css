@@ -170,7 +170,7 @@
                                                         }
                                                         .hamburger {
                                                             display: block !important;
-                                                            margin-left: 30px;
+                                                            margin-left: 50px;
                                                         }
                                                         .navbarLinks ul {
                                                             position: fixed;
@@ -1304,7 +1304,7 @@
                                                         background-color: #fff;
                                                         /* Adjust background color as needed */
                                                         border-radius: 50%;
-                                                        padding: 10px;
+                                                        padding: 5px;
                                                         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
                                                         /* Optional shadow for better visibility */
                                                         transition: background-color 0.3s;
