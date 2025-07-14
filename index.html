@@ -172,7 +172,7 @@
                 }, 2000); // Wait for the fade-out to complete before changing the image
             }
 
-            setInterval(changeBackgroundImage, 13000);
+            setInterval(changeBackgroundImage, 10000);
         </script>
         <script>
             document.addEventListener('DOMContentLoaded', () => {
@@ -199,7 +199,7 @@
                 setInterval(() => {
                     slideIndex = (slideIndex + 1) % slides.length;
                     showSlides();
-                }, 12000);
+                }, 13000);
             });
         </script>
 
@@ -246,6 +246,96 @@
                         <img src="2.jpg" alt="Product 2">
                     </div>
 
+                    <div class="product-item" style="display: none;">
+                        <img src="3.jpg" alt="Product 3">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="4.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="5.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="6.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="7.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="8.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="9.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="10.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="11.png" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="12.png" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="13.png" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="14.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="15.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="16.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="17.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="18.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="19.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="20.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="21.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="22.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="23.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="24.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="25.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="26.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="27.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="28.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="29.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="30.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="31.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="32.jpg" alt="Product 4">
+                    </div>
                 </div>
                 <br><br><a href="products.html" id="viewMoreBtn" class="btn">View More</a>
 
@@ -258,10 +348,9 @@
                 for (let i = 0; i < 2 && i < hiddenItems.length; i++) {
                     hiddenItems[i].style.display = 'block';
                 }
-                       if (remainingHidden.length === 0) {
-            this.style.display = 'none';
-        }
-
+                if (hiddenItems.length <= 2) {
+                    this.style.display = 'none';
+                }
             });
         </script>
 
@@ -304,7 +393,7 @@
 
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Wintrack Pharmaceuticals. All rights reserved.</p>
+             <p>&copy; <span id="year"></span>  Wintrack Pharmaceuticals. All rights reserved.</p>
             <img src="whitelogo.png" alt="Wintrack Pharmaceutical Logo" class="footer-logo">
         </div>
     </footer>
@@ -317,6 +406,11 @@
     </div>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 
     <script src="index.js"></script>
 

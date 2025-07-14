@@ -71,12 +71,17 @@
         </section>
 
         <script>
-            var map = L.map('map').setView([30.3753, 69.3451], 6);
+  var map = L.map('map').setView([24.9157, 67.0924], 16); // zoom 16 = street level
 
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
-        </script>
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+  // Optional: Add a marker at the address
+  L.marker([24.9271679,67.0937462]).addTo(map)
+    .bindPopup('B, 115, Block 3 Gulshan-e-Iqbal, Karachi')
+    .openPopup();
+</script>
 
     </main>
 
@@ -117,7 +122,7 @@
 
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Wintrack Pharmaceuticals. All rights reserved.</p>
+             <p>&copy; <span id="year"></span> Wintrack Pharmaceuticals. All rights reserved.</p>
             <img src="whitelogo.png" alt="Wintrack Pharmaceutical Logo" class="footer-logo">
         </div>
     </footer>
@@ -130,6 +135,10 @@
     </div>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
     <script src="index.js"></script>
 
