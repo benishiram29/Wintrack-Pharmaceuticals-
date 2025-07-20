@@ -1146,7 +1146,7 @@ footer .footer-left {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 60vw; /* better than 50% for modern design */
+  width: 70vw; /* better than 50% for modern design */
   height: 100vh; /* full screen height for consistent size */
   background-color: white;
   display: flex;
