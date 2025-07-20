@@ -457,8 +457,13 @@ section p {
 }
 
 #about h3 {
+  font-family: 'Times New Roman', Times, serif;
   color: black;
   font-size: 1.5em;
+}
+
+#about p b {
+  font-weight: bold;
 }
 
 #about h3 {
@@ -1133,28 +1138,28 @@ footer .footer-left {
     top: 30px;
     right: 20px;
     z-index: 1001;
+  
   }
 
   /* Hide nav menu initially */
-  .navbarLinks ul {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 50%;
-    height: 100vh;
-    background-color: white;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-
-    padding: 0;
-    margin: 0;
-    transition: right 0.3s ease-in-out;
-    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    border-radius: 10px;
-  }
+ .navbarLinks ul {
+  position: fixed;
+  top: 0; /* Move menu to top */
+  right: -100%;
+  width: 50%;
+  height: auto;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Left align text */
+  justify-content: flex-start;
+  margin: 0;   /* Remove extra margin */
+  transition: right 0.3s ease-in-out;
+  box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border-radius: 10px;
+  padding-top: 100px;
+}
 
   /* When menu is open */
   .navbarLinks ul.open {
@@ -1195,7 +1200,10 @@ footer .footer-left {
     width: 100%;
     text-align: left;
     padding-left: 20px;
+    margin: -5px 0;
+    
   }
+  
 
   .navbarLinks ul li a {
     display: block;
@@ -1232,13 +1240,17 @@ footer .footer-left {
   #home p1 {
     font-size: 1rem;
   }
-  #about .info-box h3 {
+  #about .team-member h3 {
     font-size: 1rem;
   }
   #about .info-box h5 {
     font-size: 1rem;
   }
   #about .info-box p2 {
+    font-size: 1rem;
+  }
+
+  #about .info-box h3{
     font-size: 1rem;
   }
 
