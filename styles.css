@@ -1449,21 +1449,55 @@ footer .footer-left {
     display: none !important;
   }
 
-  .navbarLinks ul li a {
-    font-size: 18px;
-  }
+ /* Header wrapper */
+header {
+  text-align: center;
+}
 
-  .headerMainDiv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-  }
+/* Header main div to stack logo and nav vertically */
+.headerMainDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
 
-  .headerlogoWithText h1 {
-    font-size: 20px;
-    font-weight: bold;
-  }
+/* Logo + Text */
+.headerlogoWithText {
+  text-align: center;
+}
+
+.headerlogoWithText h1 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Navbar wrapper */
+.navbarLinks {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Nav menu ul */
+#navMenu {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* optional spacing between links */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Nav links */
+.navbarLinks ul li a {
+  font-size: 18px;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  color: #000; /* optional */
+}
+
 
   #home h2 {
     font-size: 2.2rem;
