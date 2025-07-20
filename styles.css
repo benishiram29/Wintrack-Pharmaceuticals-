@@ -582,6 +582,9 @@ section p {
 #history p {
   font-weight: 100;
 }
+#history p b {
+  font-weight: bold;
+}
 
 #products {
   padding: 40px 0;
