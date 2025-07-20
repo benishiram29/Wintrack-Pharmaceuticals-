@@ -3,314 +3,446 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- Primary Meta Tags -->
-<meta name="title" content="Benish Iram | UI/UX Designer Portfolio">
-<meta name="description" content="Explore Benish Iram's portfolio: UI/UX Designer with a passion for user-friendly, visually compelling web designs and responsive interfaces.">
-<meta name="keywords" content="Benish Iram, UI Designer, UX Designer, Front-End Developer, Portfolio, Web Design, Responsive Design, Figma, HTML CSS, Bahria University">
-<meta name="author" content="Benish Iram">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wintrack-Pharma</title>
+
+<!-- Primary Meta Tags -->
+<meta name="title" content="Wintrack Pharmaceuticals | Create a Difference for Success">
+<meta name="description" content="Wintrack Pharmaceuticals is a pioneer in Pakistan’s pharmaceutical industry, committed to innovation and healthcare excellence. Create a difference for success.">
+<meta name="keywords" content="Wintrack, Pharmaceuticals, Pakistan Pharma, Healthcare, Medicine, Medical Company, GMP Approved, FDA Molecules">
+<meta name="author" content="Wintrack Pharmaceuticals">
 <meta name="robots" content="index, follow">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://benishiram29.github.io/portfolio/">
-<meta property="og:title" content="Benish Iram | UI/UX Designer Portfolio">
-<meta property="og:description" content="Explore Benish Iram's creative projects in UI/UX design, front-end development, and user-centered digital experiences.">
-<meta property="og:image" content="https://benishiram29.github.io/portfolio/benilogo.png">
+<meta property="og:title" content="Wintrack Pharmaceuticals | Create a Difference for Success">
+<meta property="og:description" content="Wintrack Pharmaceuticals is a pioneer in Pakistan’s pharmaceutical industry, committed to innovation and healthcare excellence.">
+<meta property="og:image" content="https://benishiram29.github.io/Wintrack-Pharmaceuticals-/logo.png">
 
-<!-- Twitter -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benish Iram's Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-uyzmw0w7eA+XpG42o6lvpLs2evUmP29Wd6s2lJF0U8zbpCw7f4M+g2v8ty5B9f9I6u7lTtl1jIZk+1ZPr4p2sA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
     <link rel="stylesheet" href="styles.css">
-
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
 <body>
-    <header1>
-        <nav>
-            <div class="hamburger" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+   <script>
+    function toggleDrawer() {
+        const navMenu = document.getElementById('navMenu');
+        const hamburgerBtn = document.querySelector('.hamburger');
 
-             <div class="logo">
-        <img src="benilogo.png" alt="My Logo">
-    </div>
+        navMenu.classList.toggle('open');
 
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#cv">CV</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-
-        </nav>
-
-        <script>
-            // Already defined toggleMenu
-            function toggleMenu() {
-                document.querySelector('.nav-links').classList.toggle('active');
-            }
-
-            // New logic to auto-close menu on link click
-            document.addEventListener('DOMContentLoaded', () => {
-                const navLinks = document.querySelectorAll('.nav-links a');
-                navLinks.forEach(link => {
-                    link.addEventListener('click', () => {
-                        document.querySelector('.nav-links').classList.remove('active');
-                    });
-                });
-            });
-        </script>
+        if (navMenu.classList.contains('open')) {
+            hamburgerBtn.style.display = 'none'; // Hide hamburger
+        } else {
+            hamburgerBtn.style.display = 'block'; // Show hamburger again
+        }
+    }
+</script>
 
 
-    </header1>
     <header>
-        <div class="container" id="home">
-            <br><br>
-            <div>
-                <img src="image.jpg" alt="Benish Iram's Photo">
+        <div class="headerMainDiv">
+            <div class="headerlogoWithText">
+                <img src="logo.png" alt="Wintrack Pharmaceutical Logo" class="logo">
+                <h1>Wintrack Pharmaceuticals</h1>
             </div>
 
-            <div>
-                <br><br><br><br>
-                <h1>Benish Iram</h1><br>
-                <h4><b><u>UI/UX DESIGNER</u></b></h4>
-            </div>
+            <!-- Hamburger Button -->
+            <button class="hamburger" onclick="toggleDrawer()">☰</button>
 
+            <!-- Nav Menu -->
+          <nav class="navbarLinks">
+    <ul id="navMenu">
+        <!-- Close Button -->
+        <button class="close-btn" onclick="toggleDrawer()">×</button>
+
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="policies.html">Policies & Rules</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+
+    <!-- 🍔 Hamburger Button moved below ul -->
+    <button class="hamburger" onclick="toggleDrawer()">☰</button>
+</nav>
 
         </div>
     </header>
 
 
-    <section id="hero">
-        <div class="container">
-            <div>
-                <h6>Hello,</h6>
-                <br>
-                <h7>Welcome to My Portfolio</h7>
+    <main>
+        <section id="home" class="hero-slider">
+            <div class="container">
+                <div class="hero-slide">
+                    <div class="hero-slider-content">
+                        <div class="hero-text">
+                            <h2>Welcome to Wintrack Pharmaceuticals</h2>
+                            <p>One of the Pioneers in Pakistan Pharmaceutical Industry.</p>
+                            <p1>At Wintrack, we dedicate ourselves to innovation in Pharmaceutical Products.</p1>
+                            <br><br> <br><br> <br><br><span class="horizontal-line"></span><br>
+                            <a href="#about" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-slide">
+                    <div class="hero-slider-content">
+                        <div class="hero-text">
+                            <h2>Innovating Health Solutions</h2>
+                            <p1>Providing advanced healthcare solutions for a healthier tomorrow.</p1>
+                            <br><br> <br><br> <br><br><span class="horizontal-line"></span><br>
+                            <a href="#about" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-slide">
+                    <div class="hero-slider-content">
+                        <div class="hero-text">
+                            <h2>Trusted Solutions for Patients</h2>
+                            <p1>Delivering reliable and innovative healthcare solutions tailored to meet the needs of our patients and ensure a brighter, healthier future.</p1>
+                            <br><br> <br><br> <br><br><span class="horizontal-line"></span><br>
+                            <a href="#about" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-slide">
+                    <div class="hero-slider-content">
+                        <div class="hero-text">
+                            <h2>Empowering Health with Innovation</h2>
+                            <p1>Driving forward with cutting-edge technologies and solutions for a healthier future.
+                            </p1>
+                            <br><br> <br><br> <br><br><span class="horizontal-line"></span><br>
+                            <a href="#about" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-slide">
+                    <div class="hero-slider-content">
+                        <div class="hero-text">
+                            <h2>Excellence in Pharmaceutical Care</h2>
+                            <p1>Committed to excellence and quality in every product we deliver.</p1>
+                            <br><br> <br><br> <br><br><span class="horizontal-line"></span><br>
+                            <a href="#about" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-slide">
+                    <div class="hero-slider-content">
+                        <div class="hero-text">
+                            <h2>Leading with Integrity</h2>
+                            <p1>Dedicated to ethical practices and transparency in every aspect of our business.</p1>
+                            <br><br> <br><br> <br><br><span class="horizontal-line"></span><br>
+                            <a href="#about" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-slide">
+                    <div class="hero-slider-content">
+                        <div class="hero-text">
+                            <h2>Committed to Patient Care</h2>
+                            <p1>Our mission is to enhance patient lives through effective and trusted pharmaceutical solutions.
+                            </p1>
+                            <br><br> <br><br> <br><br><span class="horizontal-line"></span><br>
+                            <a href="#about" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="arrow arrow-left">←</button>
+                <button class="arrow arrow-right">→</button>
             </div>
-            <div style="float: right; margin-right: 10px;">
-                <img src="image2.jpg" alt="Benish Iram's Photo">
+        </section>
+
+        <script>
+            document.querySelectorAll('.read-more').forEach(function(anchor) {
+                anchor.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    const offset = target.getBoundingClientRect().top + window.scrollY - 50; // Adjust '50' to match the desired offset
+                    window.scrollTo({
+                        top: offset,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+
+            const images = [
+                'bacckground.png',
+                'bacckground1.jpg',
+                'bacckground2.png',
+                'bacckground3.png',
+                'bacckground4.png',
+                'bacckground5.png',
+                'bacckground6.png',
+                'bacckground8.png',
+                'background9.png',
+                'bacckground12.png',
+            ];
+
+            let currentIndex = 0;
+            const slider = document.querySelector('.hero-slider');
+
+            function changeBackgroundImage() {
+                slider.style.opacity = 0; // Fade out to 0%
+                setTimeout(() => {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    slider.style.backgroundImage = `url(${images[currentIndex]})`;
+                    slider.style.opacity = 1; // Fade in to 100%
+                }, 2000); // Wait for the fade-out to complete before changing the image
+            }
+
+            setInterval(changeBackgroundImage, 10000);
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                let slideIndex = 0;
+                const slides = document.querySelectorAll('.hero-slide');
+                const showSlides = () => {
+                    slides.forEach((slide, index) => {
+                        slide.style.display = (index === slideIndex) ? 'block' : 'none';
+                    });
+                };
+                showSlides();
+
+                document.querySelector('.arrow-right').addEventListener('click', () => {
+                    slideIndex = (slideIndex + 1) % slides.length;
+                    showSlides();
+                });
+
+                document.querySelector('.arrow-left').addEventListener('click', () => {
+                    slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+                    showSlides();
+                });
+
+                // Optional: Automatic slide transition
+                setInterval(() => {
+                    slideIndex = (slideIndex + 1) % slides.length;
+                    showSlides();
+                }, 13000);
+            });
+        </script>
+
+        <section id="about">
+            <div class="container">
+                <br><br>
+                <div class="info-box">
+                    <div class="info-box-item left">
+                        <h3>𝐎𝐮𝐫 𝐕𝐢𝐬𝐢𝐨𝐧</h3>
+                    </div>
+                    <div class="info-box-item center">
+                        <h3>𝐎𝐮𝐫 𝐌𝐢𝐬𝐬𝐢𝐨𝐧</h3>
+                    </div>
+                    <div class="info-box-item right">
+                        <h3>𝐎𝐮𝐫 𝐕𝐚𝐥𝐮𝐞𝐬</h3>
+                    </div>
+                    <h5>To Be Open & 𝗛𝗼𝗻𝗲𝘀𝘁,<br> Whatever 𝗪𝗲 𝗗𝗼, We Do 𝗜𝘁 𝗥𝗶𝗴𝗵𝘁.</h5><br>
+                    <p2>We Aim to Conduct our Business based on the Highest Moral and Ethical standards, becoming a Prominent and Trusted leader in the Pharmaceutical Distribution Industry, and making a Significant contribution to society through the Effective
+                        Utilization of our Unique Strengths.
+                    </p2>
+                </div>
+
             </div>
-
-            <p>Showcasing my passion
-                for design and development</p><br>
-            <a href="#portfolio" class="btn">See My
-                Work</a>
-        </div>
-    </section>
-
-    <section id="about">
-       <div class="container">
-    <h2>About Me</h2>
-    <p>👋 Hi! I'm <strong>Benish Iram</strong> — a passionate UI/UX Designer and Front-End Developer who loves bringing ideas to life through clean code and beautiful designs.</p>
-
-    <p>🎨 From crafting pixel-perfect interfaces in Figma to building responsive web pages with HTML & CSS, I thrive on turning concepts into meaningful digital experiences. My go-to tools include Figma, Canva, and a sharp eye for design — because details matter!</p>
-
-    <p>⚡ What excites me the most? The magic of design thinking — solving real problems, enhancing usability, and making websites that <b>feel</b> just right. Whether I’m adjusting layouts or choosing the perfect color palette, I pour heart into every project.</p>
-
-    <p>💬 I'm a team player, a feedback enthusiast, and always curious to learn and grow. I enjoy collaborating on creative projects where innovation meets simplicity, and user needs come first.</p>
-
-    <p>🚀 I'm on a mission to blend design with functionality — to build experiences that not only look good but <b>feel</b> good. Let’s make the web a more beautiful and user-friendly place — one interface at a time.</p>
-</div>
-
-    </section>
+        </section>
 
 
-    <section id="portfolio">
-        <div class="container">
-            <h2>Portfolio</h2>
-            <div class="portfolio-items">
-                <div class="portfolio-item">
-                    <p><b>Mobile Application</b></p>
-                    <img src="project1.png">
-                    <a href="project1.pdf" class="btn">View Project</a>
-                </div>
-                <div class="portfolio-item">
-                    <p><b>Flight Booking System</b></p>
-                    <img src="project2.png">
-                    <a href="project2.pdf" class="btn">View Project</a>
-                </div>
-                <div class="portfolio-item">
-                    <p><b>Restaurant Website</b></p>
-                    <img src="project 4.png">
-                    <a href="project4.png" class="btn">View Project</a>
-                </div>
-                <div class="portfolio-item">
-                    <p><b>Shopping Website</b></p>
-                    <img src="Project 5.png">
-                    <a href="project5.pdf" class="btn">View Project</a>
-                </div>
-                <div class="portfolio-item">
-                    <p><b>Voice of Elite Customer</b></p>
-                    <img src="project 3.jpg">
-                    <a href="project3.jpg" class="btn">View Project</a>
-                </div>
+        <section id="ideology">
+            <div class="container">
+                <h2><b>Company Ideology</b></h2>
+                <p>At 𝐖𝐢𝐧𝐭𝐫𝐚𝐜𝐤 𝐏𝐡𝐚𝐫𝐦𝐚𝐜𝐞𝐮𝐭𝐢𝐜𝐚𝐥𝐬, we are committed to supplying pharmaceutical products that fully 
+                    comply with Good Manufacturing Practice (GMP) standards, with all active molecules approved by the U.S. Food and Drug 
+                    Administration (FDA). We strictly adhere to quality control protocols, ensuring the integrity of packaging and maintaining 
+                    the efficacy and safety of our products throughout their shelf life, in alignment with the regulations set by the Ministry 
+                    of Health.</p>
             </div>
-        </div>
-    </section>
+        </section>
 
+        <section id="products">
+            <div class="container">
+                <h2><b>Wintrack Brands</b></h2>
+                <p>We provide a diverse range of pharmaceutical products designed to meet your health needs, including prescription medications, over-the-counter drugs, and specialized treatments.</p><br>
+                <div class="product-grid">
+                    <div class="product-item">
+                        <img src="1.jpg" alt="Product 1">
+                    </div>
+                    <div class="product-item">
+                        <img src="2.jpg" alt="Product 2">
+                    </div>
 
-    <section id="services">
-        <div class="container">
-            <h2>What I Do?</h2>
-            <div class="services">
-                <div class="service">
-                    <i class="fas fa-paint-brush"></i>
-                    <h3>UI Design</h3>
-                    <img src="UI.jpeg" alt="UI Design Image" style=" width: 80%; height: 60%; border-radius: 10px; ">
-                    <p>Creating visually appealing and intuitive user interfaces.</p>
+                    <div class="product-item" style="display: none;">
+                        <img src="3.jpg" alt="Product 3">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="4.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="5.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="6.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="7.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="8.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="9.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="10.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="11.png" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="12.png" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="13.png" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="14.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="15.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="16.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="17.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="18.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="19.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="20.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="21.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="22.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="23.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="24.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="25.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="26.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="27.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="28.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="29.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="30.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="31.jpg" alt="Product 4">
+                    </div>
+                    <div class="product-item" style="display: none;">
+                        <img src="32.jpg" alt="Product 4">
+                    </div>
                 </div>
-                <div class="service">
-                    <i class="fas fa-user-check"></i>
-                    <h3>User Experience (UX) Design</h3>
-                    <img src="UX.jpeg" alt="UX Design Image" style=" width: 80%; height: 60%; border-radius: 10px; ">
-                    <p>Enhancing usability and accessibility boosts satisfaction.</p>
-                </div>
-                <div class="service">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h3>Responsive Design</h3>
-                    <img src="Responsive.jpeg" alt="Responsive Design Image"
-                        style=" width: 80%; height: 60%; border-radius: 10px; ">
-                    <p>Ensuring seamless experiences on all devices and screens.</p>
-                </div>
-                <div class="service">
-                    <i class="fas fa-search"></i>
-                    <h3>User Research</h3>
-                    <img src="research.jpeg" alt="User Research Image"
-                        style=" width: 80%; height: 60%; border-radius: 10px; ">
-                    <p>Gathering insights via interviews, surveys, and testing.</p>
-                </div>
-                <div class="service">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Usability Testing</h3>
-                    <img src="testing.jpeg" alt="Usability Testing Image"
-                        style=" width: 80%; height: 60%; border-radius: 10px; ">
-                    <p>Evaluating designs for improvement and optimization.</p>
-                </div>
-                <div class="service">
-                    <i class="fas fa-cogs"></i>
-                    <h3>Design Systems</h3>
-                    <img src="design.jpeg" alt="Design Systems Image"
-                        style=" width: 80%; height: 60%; border-radius: 10px; ">
-                    <p>Creating scalable design systems for consistent efficiency.</p>
-                </div>
-                <div class="service">
-                    <i class="fas fa-eye"></i>
-                    <h3>Accessibility Design</h3>
-                    <img src="accessibility.jpeg" alt="Accessibility Design Image"
-                        style=" width: 80%; height: 60%; border-radius: 10px; ">
-                    <p>Inclusive designs for all users, including disabilities.</p>
-                </div>
-                <div class="service">
-                    <i class="fas fa-file-code"></i>
-                    <h3>UI/UX Consulting</h3>
-                    <img src="expert.jpeg" alt="UI/UX Consulting Image"
-                        style=" width: 80%; height: 60%; border-radius: 10px; ">
-                    <p>Offering expert UI/UX solutions and advice.</p>
-                </div>
+                <br><br><a href="products.html" id="viewMoreBtn" class="btn">View More</a>
+
             </div>
+        </section>
 
-        </div>
-    </section>
+        <script>
+            document.getElementById('viewMoreBtn').addEventListener('click', function() {
+                const hiddenItems = document.querySelectorAll('.product-item[style="display: none;"]');
+                for (let i = 0; i < 2 && i < hiddenItems.length; i++) {
+                    hiddenItems[i].style.display = 'block';
+                }
+                if (hiddenItems.length <= 2) {
+                    this.style.display = 'none';
+                }
+            });
+        </script>
 
+    </main>
 
-    <section id="cv">
-        <div align="center" class="container">
-            <h2>Curriculum Vitae</h2>
-            <div class="cv-content">
-                <p><b>Education:<br></b> Bachelor's in Computer Science from Bahria University Karachi<br>Intermediate
-                    in Computer Science from Bahria College Karsaz Karachi<br>
-                    Matriculation in Computer Science from APSACS Sukkur</p>
-
-                <div class="skills">
-                    <p><b>Skills:</b></p>
-                    <div class="skill-box">Wireframing</div>
-                    <div class="skill-box">Prototyping</div>
-                    <div class="skill-box">Designing</div>
-                    <div class="skill-box">Front-end Development</div>
-                    <div class="skill-box">Teamwork</div>
-                    <div class="skill-box">Team Management</div>
-                    <div class="skill-box">User Experience (UX) Design</div>
-                    <div class="skill-box">User Interface (UI) Design</div>
-                    <div class="skill-box">Responsive Web Design</div>
-                    <div class="skill-box">Graphic Design</div>
-                    <div class="skill-box">Information Architecture</div>
-                    <div class="skill-box">HTML & CSS</div>
-                    <div class="skill-box">Logo Design</div>
-                </div>
-
-
-                <a href="cv.pdf" class="btn">Download CV</a>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
-
-            <section id="whatsapp-contact">
-                <div class="whatsapp-form">
-                    <h3>Contact via WhatsApp</h3>
-                    <input type="text" id="whatsappName" placeholder="Your Name" required>
-                    <input type="text" id="whatsappNumber" placeholder="Your WhatsApp Number" required>
-                    <textarea id="whatsappMessage" placeholder="Type your message" required></textarea>
-                    <button class="btn" onclick="sendWhatsApp()">Send on WhatsApp</button>
-                </div>
-
-            </section>
-            <p><b>Email:</b> <a href="mailto:benishiram1@gmail.com" style="color: black;">benishiram1@gmail.com</a></p>
-            <p><b>Phone:</b> <a href="tel:+923303250069" style="color: black;">0330-3250069</a></p>
-            <div class="social-icons">
-                <a href="https://www.instagram.com/n_beni24?igsh=MXdkcGtwNXFsYXgwaQ==" target="_blank"><i
-                        class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/benish-iram-6254972a4" target="_blank"><i
-                        class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/benishiram29" target="_blank"><i class="fab fa-github"></i></a>
-            </div>
-        </div><br><br>
-    </section>
     <footer>
-       <div class="container">
-  <p>&copy; <span id="year"></span> Benish Iram. All rights reserved.</p>
-</div>
+        <div class="container footer-content">
+            <div class="footer-left">
+                <p><i style="color: #d3d0d0;">Wintrack Pharmaceuticals</i><br><br> 𝐖𝐢𝐧𝐭𝐫𝐚𝐜𝐤 𝐏𝐡𝐚𝐫𝐦𝐚𝐜𝐞𝐮𝐭𝐢𝐜𝐚𝐥𝐬 has very highly professional team in all departments of the company.</p>
+            </div>
+            <div class="footer-center footer-info">
+                <p><i class="fas fa-map-marker-alt"></i> Address: B, 115, Block 3 Gulshan-e-Iqbal, Karachi, Karachi City, Sindh</p>
+                <hr class="footer-divider">
+                <p><i class="fas fa-phone-alt"></i> Phone: <a href="tel:02134814060">+92 213 481 4060</a></p>
+                <hr class="footer-divider">
+                <p><i class="fas fa-envelope"></i> Email:
+                    <a href="mailto:info@wintrackpharma.com">info@wintrackpharma.com</a> |
+                    <a href="mailto:wintrackpharma@yahoo.com">wintrackpharma@yahoo.com</a>
+                </p>
+                <hr class="footer-divider">
+            </div>
 
+            <div class="footer-section social-connect">
+                <p>Stay Connected with Us!</p>
+                <hr class="divider-line">
+                <div class="social-media-icons">
+                    <a href="https://www.instagram.com/wintrack.pharma_official?igsh=ZWcxamNwZmFndGg0" target="_blank" class="social-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/wintrack-pharmaceuticals/mycompany" target="_blank" class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.facebook.com/wintrackpharma" target="_blank" class="social-icon" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+             <p>&copy; <span id="year"></span>  Wintrack Pharmaceuticals. All rights reserved.</p>
+            <img src="whitelogo.png" alt="Wintrack Pharmaceutical Logo" class="footer-logo">
+        </div>
     </footer>
+    <div class="bottom">
+        <!-- Footer content -->
+        <div class="bottom-arrow" onclick="scrollToTop()">
+            &#8593;
+            <!-- This is the up arrow symbol. You can use an icon or image if you prefer. -->
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
-    <script>
-    function sendWhatsApp() {
-        const name = document.getElementById('whatsappName').value.trim();
-        const number = document.getElementById('whatsappNumber').value.trim();
-        const message = document.getElementById('whatsappMessage').value.trim();
 
-        if (name === "" || number === "" || message === "") {
-            alert("Please fill all fields.");
-            return;
-        }
-
-        const fullMessage = `Name: ${name}\nWhatsApp No: ${number}\nMessage: ${message}`;
-        const phoneNumber = "923303250069"; // Your WhatsApp number
-
-        const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(fullMessage)}`;
-        window.open(url, '_blank');
-    }
-</script>
-
-
+    <script src="index.js"></script>
 
 </body>
 

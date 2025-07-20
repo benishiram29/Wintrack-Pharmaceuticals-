@@ -1144,22 +1144,24 @@ footer .footer-left {
   /* Hide nav menu initially */
  .navbarLinks ul {
   position: fixed;
-  top: 0; /* Move menu to top */
+  top: 0;
   right: -100%;
-  width: 50%;
-  height: auto;
+  width: 60vw; /* better than 50% for modern design */
+  height: 100vh; /* full screen height for consistent size */
   background-color: white;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Left align text */
+  align-items: flex-start;
   justify-content: flex-start;
-  margin: 0;   /* Remove extra margin */
+  margin: 0;
   transition: right 0.3s ease-in-out;
   box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
   z-index: 1000;
-  border-radius: 10px;
+  border-radius: 0 0 0 10px;
   padding-top: 100px;
+  overflow: hidden; /* 💡 add this */
 }
+
 
   /* When menu is open */
   .navbarLinks ul.open {
