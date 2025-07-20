@@ -1,34 +1,36 @@
                                                     /* General Reset and Font Import */
-                                                    
+
                                                     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
                                                     html,
                                                     body {
-                                                        height: 100%;
+                                                        
                                                         margin: 0;
                                                         scroll-behavior: smooth;
                                                     }
-                                                    
+
                                                     body {
                                                         font-family: 'Roboto', sans-serif;
                                                         background-color: white;
                                                         color: #333;
                                                         display: flex;
                                                         flex-direction: column;
-                                                        min-height: 100vh;
+                                                        
                                                     }
+
                                                     /* Container */
-                                                    
+
                                                     .container {
                                                         width: 80%;
                                                         margin: 0 auto;
                                                         max-width: 1200px;
                                                     }
-                                                    
+
                                                     .content {
                                                         height: 2000px;
                                                         /* Just for demonstration to allow scrolling */
                                                     }
-                                                    
+
                                                     header {
                                                         background: white;
                                                         color: black;
@@ -41,12 +43,12 @@
                                                         z-index: 9999;
                                                         transition: opacity 0.5s ease, transform 0.5s ease;
                                                     }
-                                                    
+
                                                     header.hidden {
                                                         opacity: 0;
                                                         transform: translateY(-100%);
                                                     }
-                                                    
+
                                                     header .headerMainDiv {
                                                         display: flex;
                                                         align-items: center;
@@ -54,7 +56,7 @@
                                                         width: 92%;
                                                         margin: 0 auto;
                                                     }
-                                                    
+
                                                     header .logo {
                                                         height: 100px;
                                                         width: 100px;
@@ -62,7 +64,7 @@
                                                         object-fit: cover;
                                                         margin-right: 20px;
                                                     }
-                                                    
+
                                                     header h1 {
                                                         margin: 0;
                                                         font-family: 'Times New Roman', Times, serif;
@@ -70,23 +72,23 @@
                                                         text-align: left;
                                                         white-space: nowrap;
                                                     }
-                                                    
+
                                                     nav {
                                                         margin-left: 250px;
                                                         white-space: nowrap;
                                                     }
-                                                    
+
                                                     nav ul {
                                                         list-style: none;
                                                         padding: 0;
                                                         display: flex;
                                                         gap: -20px;
                                                     }
-                                                    
+
                                                     nav ul li {
                                                         margin: 0;
                                                     }
-                                                    
+
                                                     nav ul li a {
                                                         font-family: 'Times New Roman', Times, serif;
                                                         font-size: medium;
@@ -96,12 +98,12 @@
                                                         padding: 10px 20px;
                                                         transition: background-color 0.3s ease;
                                                     }
-                                                    
+
                                                     nav ul li a:hover {
                                                         background-color: rgba(255, 255, 255, 0.2);
                                                         border-radius: 5px;
                                                     }
-                                                    
+
                                                     nav ul li a:hover {
                                                         font-family: 'Times New Roman', Times, serif;
                                                         font-size: medium;
@@ -111,7 +113,7 @@
                                                         padding: 10px 20px;
                                                         transition: background-color 0.3s ease;
                                                     }
-                                                    
+
                                                     nav ul li a.active {
                                                         font-family: 'Times New Roman', Times, serif;
                                                         font-size: medium;
@@ -125,7 +127,7 @@
                                                         -ms-transition: background-color 0.3s ease;
                                                         -o-transition: background-color 0.3s ease;
                                                     }
-                                                    
+
                                                     nav ul li a:active {
                                                         font-family: 'Times New Roman', Times, serif;
                                                         font-size: medium;
@@ -135,13 +137,13 @@
                                                         padding: 10px 20px;
                                                         transition: background-color 0.3s ease;
                                                     }
-                                                    
+
                                                     .headerlogoWithText {
                                                         display: flex;
                                                         justify-content: flex-start;
                                                         align-items: center;
                                                     }
-                                                    
+
                                                     .navbarLinks {
                                                         display: flex;
                                                         justify-content: flex-end;
@@ -149,12 +151,13 @@
                                                         margin-left: auto;
                                                         margin-top: 19px;
                                                     }
-                                                    
+
                                                     .close-btn {
                                                         display: none;
                                                     }
+
                                                     /* Hamburger icon Responsive Design open*/
-                                                    
+
                                                     .hamburger {
                                                         display: none;
                                                         font-size: 28px;
@@ -163,38 +166,12 @@
                                                         cursor: pointer;
                                                         color: black;
                                                     }
-                                                    
-                                                    @media (max-width: 768px) {
-                                                        .close-btn {
-                                                            display: block !important;
-                                                        }
-                                                        .hamburger {
-                                                            display: block !important;
-                                                            margin-left: 50px;
-                                                        }
-                                                        .navbarLinks ul {
-                                                            position: fixed;
-                                                            top: 100px;
-                                                            /* height of header */
-                                                            right: -100%;
-                                                            width: 250px;
-                                                            height: calc(100% - 100px);
-                                                            background-color: white;
-                                                            flex-direction: column;
-                                                            align-items: flex-start;
-                                                            padding: 20px;
-                                                            gap: 15px;
-                                                            transition: right 0.3s ease-in-out;
-                                                            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
-                                                            z-index: 10000;
-                                                            border-radius: 10px;
-                                                        }
-                                                        .navbarLinks ul.open {
-                                                            right: 0;
-                                                        }
-                                                    }
-                                                    
-                                                    header .logo {
+
+
+
+
+
+                                                     header .logo {
                                                         height: 100px;
                                                         width: 100px;
                                                         object-fit: contain;
@@ -215,44 +192,9 @@
                                                         top: 2px;
                                                         height: 100vh !important;
                                                     }
-                                                    /* Hamburger icon Responsive Design close*/
-                                                    /* Main Content mobile screen open*/
-                                                    
-                                                    @media (max-width: 768px) {
-                                                        .hero-slider {
-                                                            background: url('bacckground.png') no-repeat center center/cover;
-                                                            animation: zoomInOut 10s ease-in-out;
-                                                            color: white;
-                                                            padding: 150px 0;
-                                                            text-align: center;
-                                                            min-height: 620px;
-                                                            position: relative;
-                                                            overflow: hidden;
-                                                            transition: opacity 2s ease-in-out;
-                                                            opacity: 1;
-                                                        }
-                                                        .hero-slider h2 {
-                                                            font-family: 'Times New Roman', Times, serif;
-                                                            font-size: 2rem !important;
-                                                            margin: 0;
-                                                            color: white;
-                                                            text-shadow: -1px -1px 0 black, 1px -1px 0 white, -1px 1px 0 black, 1px 1px 0 black;
-                                                        }
-                                                        .hero-slider p1 {
-                                                            font-size: 1.5rem !important;
-                                                            color: white;
-                                                            font-family: 'Times New Roman', Times, serif;
-                                                            font-weight: 400;
-                                                        }
-                                                        .hero-slider p {
-                                                            font-size: 1rem !important; 
-                                                        }
 
-                                                    }
-                                                    /* Main Content mobile screen close*/
-                                                    /* Main Content */
-                                                    
-                                                    main {
+
+                                                      main {
                                                         padding-top: 120px;
                                                     }
                                                     
@@ -269,7 +211,7 @@
                                                         opacity: 1;
                                                     }
                                                     
-                                                    @keyframes zoomInOut {
+                                                   @keyframes zoomInOut {
                                                         0% {
                                                             transform: scale(1);
                                                         }
@@ -471,24 +413,7 @@
                                                         margin-right: auto;
                                                     }
                                                     
-                                                    @media (max-width: 768px) {
-                                                        #about .info-box-item.left {
-                                                            margin-left: 0px !important;
-                                                            margin-right: 0px !important;
-                                                        }
-                                                        #about .info-box-item.right {
-                                                            margin-left: 0px !important;
-                                                        }
-                                                        #about .info-box-item {
-                                                            flex: 1;
-                                                            text-align: center;
-                                                            padding: 0px;
-                                                            position: unset;
-                                                            font-family: 'Arial', sans-serif;
-                                                        }
-                                                    }
-                                                    
-                                                    #about .info-box-item.right {
+                                                      #about .info-box-item.right {
                                                         margin-left: auto;
                                                     }
                                                     
@@ -603,17 +528,9 @@
                                                     .button-container button:focus {
                                                         outline-color: #da4c2c;
                                                     }
-                                                    
-                                                    @media (max-width: 768px) {
-                                                        .team-member {
-                                                            margin-bottom: 20px;
-                                                            display: flex;
-                                                            flex-direction: column !important;
-                                                            align-items: center;
-                                                        }
-                                                    }
-                                                    
-                                                    .team-member {
+
+
+                                                      .team-member {
                                                         margin-bottom: 20px;
                                                         display: flex;
                                                         align-items: center;
@@ -1010,125 +927,11 @@
                                                     .contact-info a:hover {
                                                         text-decoration: underline;
                                                     }
-                                                    /* Responsive layout for tablets and smaller devices */
-                                                    
-                                                    @media (max-width: 1024px) {
-                                                        .footer-content {
-                                                            flex-direction: column;
-                                                            align-items: center;
-                                                            text-align: center;
-                                                        }
-                                                        .footer-center,
-                                                        .footer-right,
-                                                        .footer-section.social-connect {
-                                                            margin: 10px 0;
-                                                            flex: none;
-                                                            width: 100%;
-                                                            max-width: 90%;
-                                                        }
-                                                        .footer-info {
-                                                            max-width: 100%;
-                                                            margin: 0 auto;
-                                                            align-items: center;
-                                                        }
-                                                        .footer-bottom {
-                                                            flex-direction: column-reverse;
-                                                            text-align: center;
-                                                            gap: 10px;
-                                                            padding: 15px;
-                                                        }
-                                                        .footer-bottom p,
-                                                        .footer-bottom img {
-                                                            margin: 0;
-                                                        }
-                                                        .footer-bottom img {
-                                                            margin: 0 auto;
-                                                        }
-                                                    }
-                                                    /* Smaller mobile devices */
-                                                    
-                                                    @media (max-width: 600px) {
-                                                        .footer-left,
-                                                        .footer-center,
-                                                        .footer-right,
-                                                        .footer-section.social-connect {
-                                                            margin: 10px 0;
-                                                            flex: none;
-                                                            width: 100%;
-                                                            max-width: 100%;
-                                                        }
-                                                        .footer-left {
-                                                            font-size: 1em;
-                                                            flex: 1;
-                                                            text-align: center !important;
-                                                        }
-                                                        .footer-info p {
-                                                            font-size: 13px;
-                                                            padding: 6px 0;
-                                                        }
-                                                        .footer-bottom p {
-                                                            font-size: 13px;
-                                                            margin-left: 0;
-                                                        }
-                                                        .footer-logo {
-                                                            height: 40px;
-                                                        }
-                                                        .social-icon {
-                                                            font-size: 28px;
-                                                        }
-                                                        .footer-divider {
-                                                            width: 90%;
-                                                            margin: 10px auto;
-                                                        }
-                                                        .footer-center {
-                                                            flex: 2;
-                                                            text-align: center;
-                                                            margin-right: 0px !important;
-                                                        }
-                                                        .footer-info {
-                                                            display: flex;
-                                                            flex-direction: column;
-                                                            font-size: 14px;
-                                                            max-width: 100%;
-                                                            margin: 0 auto;
-                                                            text-align: center !important;
-                                                            display: flex;
-                                                            justify-content: center !important;
-                                                        }
-                                                        footer {
-                                                            background-color: #444242;
-                                                            color: white;
-                                                            padding: 20px 0;
-                                                            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-                                                            position: relative;
-                                                            width: 100%;
-                                                            bottom: 0;
-                                                            margin-top: 60px;
-                                                        }
-                                                        .footer-info p {
-                                                            text-align: center !important;
-                                                            margin: 0;
-                                                            padding: 10px 0;
-                                                        }
-                                                        .footer-info {
-                                                            display: flex;
-                                                            flex-direction: column;
-                                                            font-size: 14px;
-                                                            max-width: 100% !important;
-                                                            margin: 0 auto;
-                                                        }
-                                                        .footer-bottom p {
-                                                            margin: 0;
-                                                            font-size: 14px;
-                                                            color: black;
-                                                            margin-left: 0px !important;
-                                                        }
-                                                        .footer-bottom img {
-                                                            margin-right: 146px !important;
-                                                        }
-                                                        /* Added margin to separate the footer from the album images */
-                                                    }
-                                                      footer {
+
+
+
+
+                                                       footer {
                                                             background-color: #444242;
                                                             color: white;
                                                             padding: 20px 0;
@@ -1235,7 +1038,12 @@
                                                         flex: 1;
                                                         text-align: left;
                                                         margin-right: 60px;
+                                                        
                                                     }
+                                                    footer .footer-left{
+                                                        margin-top: 10px;
+                                                    }
+                                                    
                                                     
                                                     .footer-center {
                                                         flex: 2;
@@ -1315,3 +1123,504 @@
                                                         background-color: #f0f0f0;
                                                         /* Adjust hover background color as needed */
                                                     }
+
+
+                                               @media (max-width: 768px) {
+
+                                                body{
+                                                    overflow-x: hidden;
+                                                    
+                                                }
+                                                h2{
+                                                        font-size: 1.5rem;
+                                                    }
+                                                    p{
+                                                        font-size: 1rem;
+                                                    }
+
+    /* Show Hamburger */
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 1001;
+    }
+
+    /* Hide nav menu initially */
+    .navbarLinks ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 50%;
+        height: 100vh;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        
+        padding: 0;
+        margin: 0;
+        transition: right 0.3s ease-in-out;
+        box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        border-radius: 10px;
+    }
+
+    /* When menu is open */
+    .navbarLinks ul.open {
+        right: 0;
+    }
+/* Hide hamburger when menu is open */
+.navbarLinks ul.open ~ .hamburger {
+    display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px); /* Blur effect */
+  background-color: rgba(0, 0, 0, 0.3); /* Optional: dark transparent layer */
+  z-index: 5;
+  display: none; /* Hidden by default */
+}
+
+    /* Close button */
+    .close-btn {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        font-size: 30px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #000;
+    }
+
+    
+    /* Hide default nav on desktop */
+    .navbarLinks ul li {
+        width: 100%;
+        text-align: left;
+        padding-left: 20px;
+        
+    }
+
+    .navbarLinks ul li a {
+        display: block;
+        padding: 15px;
+        width: 100%;
+        font-size: 18px;
+        color: #333;
+        text-decoration: none;
+    }
+
+    .headerMainDiv {
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .headerlogoWithText h1 {
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+
+#home h2{
+    font-size: 2rem;
+}
+#home p{
+    font-size: 1.5rem;
+    width: 90%;
+}
+#home p1{
+    
+    font-size: 1rem;
+}
+#about .info-box h3{
+    font-size:1rem;
+   
+}
+#about .info-box h5{
+    font-size: 1rem;
+} 
+#about .info-box p2{
+    font-size: 1rem;
+}
+
+#ideology h2{
+    font-size: 1.5rem;
+}
+#ideology p{
+    font-size: 1rem;
+}
+
+#products h2{
+    font-size: 1.5rem;
+}
+#products p{
+    font-size: 1rem;
+}
+#product .product-item {
+                                                        
+                                                        border-radius: 5px;
+                                                        padding: 5px;
+                                                        
+                                                        width: 150px;
+                                                        height: 50px;
+                                                    }
+
+
+  /* === Footer Main Container === */
+.footer-container {
+  display: flex;
+  flex-direction: column; /* Stack everything vertically */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* === Footer Content Section === */
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Remove flex here for clean text centering */
+.footer-left,
+.footer-center,
+.footer-info {
+  width: 100%;
+  max-width: 300px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+
+
+/* === Footer Info === */
+.footer-info {
+  max-width: 100%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+
+/* === Footer Bottom Section === */
+.footer-bottom {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+  text-align: center;
+}
+
+/* === Footer Bottom Elements === */
+.footer-bottom p,
+.footer-bottom img {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#about h2{
+    font-size: 1.5rem;
+}
+#about p{
+    font-size: 1rem;
+}
+
+   #about .info-box-item.left {
+                                                            margin-left: 0px !important;
+                                                            margin-right: 0px !important;
+                                                        }
+                                                        #about .info-box-item.right {
+                                                            margin-left: 0px !important;
+                                                        }
+                                                        #about .info-box-item {
+                                                            flex: 1;
+                                                            text-align: center;
+                                                            padding: 0px;
+                                                            position: unset;
+                                                            
+                                                        }
+
+                                                         .team-member {
+                                                            margin-bottom: 20px;
+                                                            display: flex;
+                                                            flex-direction: column !important;
+                                                            align-items: center;
+                                                        }
+
+                                                        .team-member img {
+                                                            width: 200px;
+                                                            height: 200px;
+                                                            border-radius: 50%;
+                                                            margin-bottom: 10px;
+                                                        }
+
+                                                        .team-member h3{
+                                                            font-weight: bold;
+                                                        font-size: 1rem;
+                                                            width: 100%;
+                                                        }
+                                                        #about h4{
+                                                            font-size: 1rem;
+                                                        }
+
+                                                        #history h2{
+                                                            font-size: 1.5rem;
+                                                        }
+
+                                                        #history p{
+                                                            font-size: 1rem;
+                                                        }
+
+                                                        #events h2{
+                                                            font-size: 1.5rem;
+                                                        }
+                                                        #events p{
+                                                            font-size: 1rem;
+                                                        }
+
+                                                        #events p1{
+                                                            font-size: 1rem;
+                                                        }
+
+                                                         #inauguration .image-gallery h3,
+                                                    #malaysia .image-gallery h3,
+                                                    #thailand .image-gallery h3,
+                                                    #asiapacific .image-gallery h3,
+                                                    #biennial .image-gallery h3 {
+                                                        
+                                                        font-size: 1.5rem;
+                                                    }
+
+                                                     #inauguration .image-gallery p,
+                                                    #malaysia .image-gallery p,
+                                                    #thailand .image-gallery p,
+                                                    #asiapacific .image-gallery p,
+                                                    #biennial .image-gallery p {
+                                                        
+                                                        font-size: 1rem;
+                                                    }
+
+                                                        #policies h1{
+                                                            font-size:1.5rem ;
+                                                        }
+                                                        #policies p{
+                                                            font-size: 1rem;
+                                                        }
+
+                                                        #policies .container h2, #contact h2{
+                                                            font-size:1.5rem ;
+                                                        }
+
+                                                        #policies .container p, #contact p{
+                                                            font-size:1rem ;
+                                                        }
+
+
+
+
+
+
+
+
+
+
+
+                                               }
+
+@media (min-width: 768px) and (max-width: 1200px) {
+
+    body {
+        overflow-x: hidden;
+        margin-top: 20px !important;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    /* Hide hamburger in this range */
+    .hamburger {
+        display: none !important;
+    }
+
+    
+
+    
+    .navbarLinks ul li a {
+        font-size: 18px;
+    }
+
+    .headerMainDiv {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+       
+    }
+
+    .headerlogoWithText h1 {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    #home h2 {
+        font-size: 2.2rem;
+    }
+
+    #home p {
+        font-size: 1.6rem;
+        width: 80%;
+    }
+
+    #about .info-box h3,
+    #about .info-box h5,
+    #about .info-box p2,
+    #about h4,
+    #about p,
+    #history p,
+    #events p,
+    #events p1,
+    #policies h1,
+    #policies p,
+    #policies .container h2,
+    #policies .container p,
+    #contact p,
+    #ideology p,
+    #products p {
+        font-size: 1.1rem;
+    }
+     #contact h2, #policies h1,#ideology h2, #products h2, #about h2,  #history h2, #events h2{
+        font-size: 1.5rem;
+     }
+
+    #product .product-item {
+        width: 180px;
+        height: 60px;
+        padding: 10px;
+    }
+
+    .team-member img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .team-member h3 {
+        font-size: 1.2rem;
+    }
+
+             #inauguration .image-gallery h3,
+                                                    #malaysia .image-gallery h3,
+                                                    #thailand .image-gallery h3,
+                                                    #asiapacific .image-gallery h3,
+                                                    #biennial .image-gallery h3 {
+                                                        
+                                                        font-size: 1.5rem;
+                                                    }
+
+                                                     #inauguration .image-gallery p,
+                                                    #malaysia .image-gallery p,
+                                                    #thailand .image-gallery p,
+                                                    #asiapacific .image-gallery p,
+                                                    #biennial .image-gallery p {
+                                                        
+                                                        font-size: 1rem;
+                                                    }
+
+  .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .footer-info {
+        max-width: 100%;
+        font-size: 13px;
+        
+
+    }
+footer  .footer-content .footer-divider{
+    width: 900px;
+    align-self: center;
+}
+
+    .footer-info p {
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+        margin-bottom: 0;
+    }
+
+    .footer-bottom p {
+        margin-left: 0;
+        font-size: 13px;
+    }
+
+    .footer-bottom img {
+        margin-right: 0;
+        margin-top: 10px;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        text-align: center;
+        margin: 10px 0;
+        flex: 1 1 100%;
+    }
+
+    .footer-section.social-connect p {
+        font-size: 14px;
+    }
+
+    .social-media-icons {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .social-icon {
+        font-size: 20px;
+    }
+
+    .bottom-arrow {
+        bottom: 10px;
+        right: 10px;
+        font-size: 20px;
+        padding: 4px;
+    }
+
+}
+
+

@@ -24,6 +24,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize first slide
     showSlide(currentSlide);
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('nav ul li a');
+    const currentPage = window.location.pathname.split("/").pop();
+
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPage) {
+            link.classList.add('active');
+        }
+    });
+});
+
 
 let lastScrollTop = 0;
 const header = document.querySelector('header');

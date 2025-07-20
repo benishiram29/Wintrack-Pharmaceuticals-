@@ -14,11 +14,19 @@
 
 <body>
     <script>
-        function toggleDrawer() {
-            const navMenu = document.getElementById('navMenu');
-            navMenu.classList.toggle('open');
+    function toggleDrawer() {
+        const navMenu = document.getElementById('navMenu');
+        const hamburgerBtn = document.querySelector('.hamburger');
+
+        navMenu.classList.toggle('open');
+
+        if (navMenu.classList.contains('open')) {
+            hamburgerBtn.style.display = 'none'; // Hide hamburger
+        } else {
+            hamburgerBtn.style.display = 'block'; // Show hamburger again
         }
-    </script>
+    }
+</script>
     <header>
         <div class="headerMainDiv">
             <div class="headerlogoWithText">

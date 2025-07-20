@@ -30,12 +30,21 @@
 </head>
 
 <body>
-    <script>
-        function toggleDrawer() {
-            const navMenu = document.getElementById('navMenu');
-            navMenu.classList.toggle('open');
+   <script>
+    function toggleDrawer() {
+        const navMenu = document.getElementById('navMenu');
+        const hamburgerBtn = document.querySelector('.hamburger');
+
+        navMenu.classList.toggle('open');
+
+        if (navMenu.classList.contains('open')) {
+            hamburgerBtn.style.display = 'none'; // Hide hamburger
+        } else {
+            hamburgerBtn.style.display = 'block'; // Show hamburger again
         }
-    </script>
+    }
+</script>
+
 
     <header>
         <div class="headerMainDiv">
@@ -48,19 +57,23 @@
             <button class="hamburger" onclick="toggleDrawer()">☰</button>
 
             <!-- Nav Menu -->
-            <nav class="navbarLinks">
-                <ul id="navMenu">
-                    <!-- Close Button -->
-                    <button class="close-btn" onclick="toggleDrawer()">×</button>
+          <nav class="navbarLinks">
+    <ul id="navMenu">
+        <!-- Close Button -->
+        <button class="close-btn" onclick="toggleDrawer()">×</button>
 
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="aboutus.html">About Us</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="policies.html">Policies & Rules</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="policies.html">Policies & Rules</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+
+    <!-- 🍔 Hamburger Button moved below ul -->
+    <button class="hamburger" onclick="toggleDrawer()">☰</button>
+</nav>
+
         </div>
     </header>
 
@@ -405,9 +418,6 @@
                     </a>
                 </div>
             </div>
-
-
-
         </div>
         <div class="footer-bottom">
              <p>&copy; <span id="year"></span>  Wintrack Pharmaceuticals. All rights reserved.</p>
