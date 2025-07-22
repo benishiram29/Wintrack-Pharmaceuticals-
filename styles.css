@@ -244,7 +244,7 @@ main {
 }
 
 .hero-slider p1 {
-  font-size: 2em;
+  font-size: 1.5em;
   color: white;
   font-family: "Times New Roman", Times, serif;
   font-weight: 550;
@@ -252,7 +252,7 @@ main {
 
 .hero-slider h2 {
   font-family: "Times New Roman", Times, serif;
-  font-size: 4em;
+  font-size: 3.5em;
   margin: 0;
   color: white;
   text-shadow: -1px -1px 0 black, 1px -1px 0 white, -1px 1px 0 black,
@@ -260,7 +260,7 @@ main {
 }
 
 .hero-slider p {
-  font-size: 3em;
+  font-size: 2.5em;
   color: white;
   font-family: "Times New Roman", Times, serif;
 }
@@ -929,6 +929,76 @@ section p {
   text-decoration: underline;
 }
 
+.contact-form-section {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: -10px;
+  border-radius: 10px;
+}
+
+.contact-form-section h3 {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2em;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+.contact-form-section .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form-section label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+  font-family: "Roboto", sans-serif;
+}
+
+.contact-form-section input,
+.contact-form-section textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form-section input:focus,
+.contact-form-section textarea:focus {
+  outline: none;
+  border-color: #77b13f;
+}
+
+.contact-form-section .btn {
+  display: inline-block;
+  background-color: #319e52;
+  color: #fff;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form-section .btn:hover {
+  outline: 2px solid #77b13f;      /* Green outline */
+  border: 2px solid 77b13f;       /* Green border */
+  background-color: white;       /* White background */
+  color: #77b13f;     
+}
+
+
+
+
 footer {
   background-color: #444242;
   color: white;
@@ -1160,6 +1230,7 @@ footer .footer-left {
   border-radius: 0 0 0 10px;
   padding-top: 100px;
   overflow: hidden; /* 💡 add this */
+  border-radius: 10px 0 0 10px; /* Rounded corners for modern look */
 }
 
 
@@ -1203,17 +1274,27 @@ footer .footer-left {
     text-align: left;
     padding-left: 20px;
     margin: -5px 0;
+
     
   }
+
   
 
   .navbarLinks ul li a {
     display: block;
     padding: 15px;
     width: 100%;
-    font-size: 18px;
+    font-size: 16px;
     color: #333;
     text-decoration: none;
+  }
+
+  .navbarLinks ul li a.active {
+ font-size: 16px;
+    background: rgba(202, 201, 201, 0.3);
+   
+    border-left: 4px solid #77b13f;
+  border-bottom: 1px solid #77b13f;
   }
 
   .headerMainDiv {
@@ -1222,6 +1303,7 @@ footer .footer-left {
     align-items: center;
     justify-content: space-around;
   }
+
 
   .headerlogoWithText h1 {
     font-size: 15px;
@@ -1233,15 +1315,28 @@ footer .footer-left {
 
 
   #home h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   #home p {
-    font-size: 1.5rem;
+    font-size: 1rem;
     width: 90%;
   }
   #home p1 {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
+
+  .hero-text a{
+    font-size: 0.9rem;
+   
+  }
+.read-more {
+
+  padding: 5px 15px;
+  border: 0.5px solid white;
+  border-radius: 3px;
+
+}
+
   #about .team-member h3 {
     font-size: 1rem;
   }
@@ -1276,6 +1371,29 @@ footer .footer-left {
     width: 150px;
     height: 50px;
   }
+
+
+  .contact-form-section {
+    padding: 40px 15px;
+    margin-top: 30px;
+  }
+
+  .contact-form-section h3 {
+    font-size: 1.5em;
+  }
+
+  .contact-form-section input,
+  .contact-form-section textarea {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .contact-form-section .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    width: 100%; /* Full width button on small screens */
+  }
+
 
   /* === Footer Main Container === */
   .footer-container {
