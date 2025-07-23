@@ -1299,7 +1299,7 @@ footer .footer-left {
     margin: 5px 0;
     font-size: 12px;
   }
- .mobile-contacts img, p {
+.mobile-only .mobile-contacts img, p8 {
     margin-left: 15px ;
     font-size: 12px;
     font-weight: bold;

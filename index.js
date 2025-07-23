@@ -149,6 +149,51 @@ function scrollToTop() {
 }
 
 
+//for contactreach
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    // Smooth scroll
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+
+    // Close hamburger menu (drawer + overlay)
+    const navMenu = document.getElementById('navMenu');
+    const overlay = document.getElementById('overlay');
+
+    if (navMenu && navMenu.classList.contains('open')) {
+      navMenu.classList.remove('open');
+    }
+
+    if (overlay && overlay.classList.contains('active')) {
+      overlay.classList.remove('active');
+      overlay.style.display = 'none';
+    }
+  });
+});
+
+
+  
+
+  
+ // Smooth scroll JS (only works if you're on other page)
+  window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash;
+    if (hash) {
+      const target = document.querySelector(hash);
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
+    }
+  });
+ 
 
 
 document.addEventListener('keydown', function(e) {
