@@ -1190,7 +1190,7 @@ footer .footer-left {
   /* Adjust hover background color as needed */
 }
 
-.mobile-only {
+.mobile-only, #contactreach {
   display: none;
 }
 .navbarLinks img{
@@ -1268,7 +1268,7 @@ footer .footer-left {
             margin-top: 20px;
         }
 
- .mobile-only {
+ .mobile-only , #contactreach{
     display: block;
   }
 
@@ -1297,6 +1297,14 @@ footer .footer-left {
 
   .mobile-contact p {
     margin: 5px 0;
+    font-size: 12px;
+  }
+ .mobile-contacts img, p {
+    margin-left: 15px ;
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+    font-family: 'Times New Roman', Times, serif;
   }
 
   .mobile-social {
@@ -1307,7 +1315,7 @@ footer .footer-left {
 
   .mobile-social a {
     color: #333;
-    font-size: 18px;
+    font-size: 15px;
   }
 
 
