@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
+<link rel="icon" href="logo.png" type="image/png">
 </head>
 
 <body>
@@ -40,24 +40,69 @@
             <!-- Hamburger Button -->
             <button class="hamburger" onclick="toggleDrawer()">☰</button>
 
-            <!-- Nav Menu -->
-            <nav class="navbarLinks">
-                <ul id="navMenu">
-                    <!-- Close Button -->
-                    <button class="close-btn" onclick="toggleDrawer()">×</button>
+          
+         <!-- Updated Hamburger Menu HTML with Professional Touch -->
+<nav class="navbarLinks">
+    <ul id="navMenu">
+        <!-- Top Section: Logo + Close Button -->
+        <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 10px 20px;">
+            <img src="logo.png" alt="Logo" style="height: 40px;">
+            <button class="close-btn" onclick="toggleDrawer()">&times;</button>
+        </div>
 
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="aboutus.html">About Us</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="policies.html">Policies & Rules</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-            </nav>
+        <!-- Navigation Links -->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="policies.html">Policies & Rules</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+
+      <!-- CTA Button -->
+
+<!-- Contact Info -->
+<div class="mobile-only mobile-contact">
+    <p><i class="fas fa-phone-alt"></i> <a href="tel:+922134814060">+92 213 481 4060</a></p>
+    <p><i class="fas fa-envelope"></i> <a href="mailto:info@wintrackpharma.com">info@wintrackpharma.com</a></p>
+</div>
+
+<!-- Social Icons -->
+<div class="mobile-only mobile-social">
+    <a href="https://www.instagram.com/wintrack.pharma_official" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.linkedin.com/company/wintrack-pharmaceuticals" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://www.facebook.com/wintrackpharma" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+</div>
+
+    </ul>
+</nav>
+
+
         </div>
     </header>
 
+<div id="overlay" onclick="toggleDrawer()"></div>
+<script>
+    function toggleDrawer() {
+        const navMenu = document.getElementById('navMenu');
+        const overlay = document.getElementById('overlay');
 
+        navMenu.classList.toggle('open');
+        overlay.classList.toggle('active');
+
+        if (navMenu.classList.contains('open')) {
+            overlay.style.display = 'block'; // Show overlay
+        } else {
+            overlay.style.display = 'none'; // Hide overlay
+        }
+    }
+    </script>
+    
 
     <main>
 
@@ -79,13 +124,13 @@
         </section>
 
 
-<section class="contact-form-section">
+<section class="contact-form-section" id="reach">
     <div class="container">
-        <h3>Reach Out to Us!</h3>
+        <h3>Reach Out To Us!</h3>
         <form action="https://formsubmit.co/wintrackpharmaceutical@gmail.com" method="POST">
             <!-- Hidden field to prevent spam -->
             <input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_next" value="https://benishiram29.github.io/Wintrack-Pharmaceuticals-/contact.html">
+<input type="hidden" name="_next" value="https://benishiram29.github.io/Wintrack-Pharmaceuticals/contact.html">
 
 
             <div class="form-group">

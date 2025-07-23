@@ -1190,6 +1190,12 @@ footer .footer-left {
   /* Adjust hover background color as needed */
 }
 
+.mobile-only {
+  display: none;
+}
+.navbarLinks img{
+  display: none;
+}
 @media (max-width: 768px) {
   body {
     overflow-x: hidden;
@@ -1226,13 +1232,15 @@ footer .footer-left {
   margin: 0;
   transition: right 0.3s ease-in-out;
   box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
+  z-index: 1001;
   border-radius: 0 0 0 10px;
   padding-top: 100px;
   overflow: hidden; /* 💡 add this */
   border-radius: 10px 0 0 10px; /* Rounded corners for modern look */
 }
-
+.navbarLinks img{
+  display: block !important;
+}
 
   /* When menu is open */
   .navbarLinks ul.open {
@@ -1242,6 +1250,65 @@ footer .footer-left {
   .navbarLinks ul.open ~ .hamburger {
     display: none;
   }
+
+     .navbarLinks ul li a {
+            font-size: 16px;
+        }
+
+        .navbarLinks ul li a:hover {
+            background-color: #f0f0f0;
+        }
+
+        .navbarLinks ul li {
+            padding: 10px 0;
+        }
+
+        .navbarLinks ul li:last-child {
+            border-top: 1px solid #ccc;
+            margin-top: 20px;
+        }
+
+ .mobile-only {
+    display: block;
+  }
+
+  .cta-wrapper {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .cta-btn {
+    background-color: #77b13f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+  }
+
+  .mobile-contact {
+    padding: 20px;
+    font-size: 14px;
+    color: #333;
+  }
+
+  .mobile-contact p {
+    margin: 5px 0;
+  }
+
+  .mobile-social {
+    display: flex;
+    gap: 15px;
+    padding: 0 20px 20px 20px;
+  }
+
+  .mobile-social a {
+    color: #333;
+    font-size: 18px;
+  }
+
 
   .overlay {
     position: fixed;
@@ -1254,6 +1321,21 @@ footer .footer-left {
     z-index: 5;
     display: none; /* Hidden by default */
   }
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 998;
+  display: none;
+}
+#overlay.active {
+  display: block;
+}
+
 
   /* Close button */
   .close-btn {
