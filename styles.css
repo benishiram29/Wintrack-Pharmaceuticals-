@@ -1252,7 +1252,7 @@ footer .footer-left {
   }
 
      .navbarLinks ul li a {
-            font-size: 16px;
+            font-size: 14px;
         }
 
         .navbarLinks ul li a:hover {
@@ -1279,13 +1279,14 @@ footer .footer-left {
   }
 
   .cta-btn {
-    background-color: #77b13f;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
+
+    color: #77b13f;
+    padding-top: 50px;
     text-decoration: none;
     font-weight: bold;
     display: inline-block;
+    font-size: 14px;
+    margin-left: 25px;
   }
 
   .mobile-contact {
@@ -1364,15 +1365,14 @@ footer .footer-left {
 
   .navbarLinks ul li a {
     display: block;
-    padding: 15px;
+    padding: 5px;
     width: 100%;
-    font-size: 16px;
     color: #333;
     text-decoration: none;
   }
 
   .navbarLinks ul li a.active {
- font-size: 16px;
+ font-size: 14px;
     background: rgba(202, 201, 201, 0.3);
    
     border-left: 4px solid #77b13f;
