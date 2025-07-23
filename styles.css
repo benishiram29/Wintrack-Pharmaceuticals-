@@ -1190,9 +1190,9 @@ footer .footer-left {
   /* Adjust hover background color as needed */
 }
 
-.mobile-only, #contactreach {
-  display: none;
-}
+ .mobile-only , .cta-btn{
+    display: none;
+  }
 .navbarLinks img{
   display: none;
 }
@@ -1268,7 +1268,7 @@ footer .footer-left {
             margin-top: 20px;
         }
 
- .mobile-only , #contactreach{
+ .mobile-only , .cta-btn{
     display: block;
   }
 
